@@ -379,6 +379,7 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{_libdir}/libkdeinit4_*.so
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/*.h
+%{_datadir}/apps/cmake/modules/FindKOfficeLibs.cmake
 
 %files common
 %defattr(644,root,root,755)
@@ -466,19 +467,17 @@ rm -rf $RPM_BUILD_ROOT
 #%{_desktopdir}/kde/kivio.desktop
 #%{_iconsdir}/*/*/apps/kivio.png
 #
-#%files kplato
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kplato
-#%attr(755,root,root) %{_libdir}/libkdeinit4_kplato.so
-#%{_libdir}/kde4/kplato.la
-#%attr(755,root,root) %{_libdir}/kde4/kplato.so
-#%{_libdir}/kde4/libkplatopart.la
-#%attr(755,root,root) %{_libdir}/kde4/libkplatopart.so
-#%{_datadir}/apps/kplato
-#%{_datadir}/services/kplatopart.desktop
-#%{_desktopdir}/kde/kplato.desktop
-#%{_iconsdir}/crystalsvg/*/apps/kplato.*
-#
+%files kplato
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/kplato
+%attr(755,root,root) %{_libdir}/libkdeinit4_kplato.so
+%attr(755,root,root) %{_libdir}/kde4/libkplatopart.so
+%{_datadir}/apps/kplato
+%{_datadir}/kde4/services/kplatopart.desktop
+%{_desktopdir}/kde4/kplato.desktop
+#%{_iconsdir}/oxygen/*/apps/kplato.*
+%{_kdedocdir}/en/kplato
+
 #%files kpresenter
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kpresenter

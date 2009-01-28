@@ -257,9 +257,6 @@ Requires:       %{name}-common = %{version}-%{release}
 %description kformula
 KFormula is KOffice part for creating formulas, equations, etc...
 
-%description kformula -l pl.UTF-8
-KFormula jest aplikacjƒ~E s≈~Bu≈ºƒ~Ecƒ~E do tworzenia wzor√≥w, r√≥wna≈~D, itp.
-
 %package kivio
 Summary:	KOffice - kivio
 Summary(pl.UTF-8):	KOffice - kivio

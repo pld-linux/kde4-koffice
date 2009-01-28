@@ -179,22 +179,6 @@ KChart jest aplikacją służącą do generowania wykresów.
 %description kchart -l pt_BR.UTF-8
 Gerador de diagramas do KOffice.
 
-%package kexi
-Summary:	KOffice - Kexi
-Summary(pl.UTF-8):	KOffice - Kexi
-Group:		X11/Applications
-Requires:	%{name}-common = %{version}-%{release}
-Obsoletes:	kexi
-Obsoletes:	kexi-backend-mysql
-Obsoletes:	kexi-backend-pgsql
-
-%description kexi
-Kexi is KOffice part for using database system such as MySQL.
-
-%description kexi -l pl.UTF-8
-Kexi jest aplikacją służącą do korzystania z systemów baz danych
-takich jak MySQL.
-
 %package kformula
 Summary:	KOffice - kformula
 Summary(pl.UTF-8):	KOffice - kformula
@@ -508,59 +492,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kchart*.desktop
 #%{_iconsdir}/*/*x*/apps/kchart.png
 
-#%files kexi
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kexi*
-#%attr(755,root,root) %{_bindir}/ksqlite
-#%attr(755,root,root) %{_bindir}/ksqlite2
-#%attr(755,root,root) %{_bindir}/ksqlite2to3
-#%attr(755,root,root) %{_libdir}/libkdeinit4_kexi.so
-#%{_libdir}/libkformdesigner.la
-#%attr(755,root,root) %{_libdir}/libkformdesigner.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkformdesigner.so.2
-#%{_libdir}/libkexi*.la
-#%attr(755,root,root) %{_libdir}/libkexi*.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkexicore.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexidatatable.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexidb.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexidbparser.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexiextendedwidgets.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexiformutils.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexiguiutils.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkeximain.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkeximigrate.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexirelationsview.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexisql2.so.2
-#%attr(755,root,root) %ghost %{_libdir}/libkexisql3.so.3
-#%attr(755,root,root) %ghost %{_libdir}/libkexiutils.so.2
-#%{_libdir}/kde3/*kexi*.la
-#%attr(755,root,root) %{_libdir}/kde3/*kexi*.so
-#%{_libdir}/kde3/kformdesigner_containers.la
-#%attr(755,root,root) %{_libdir}/kde3/kformdesigner_containers.so
-#%{_libdir}/kde3/kformdesigner_stdwidgets.la
-#%attr(755,root,root) %{_libdir}/kde3/kformdesigner_stdwidgets.so
-#%{_datadir}/apps/kexi
-#%{_datadir}/apps/konqueror/servicemenus/kexi_konqi.desktop
-#%{_datadir}/config/kexirc
-#%{_datadir}/config/magic/kexi.magic
-#%{_datadir}/mimelnk/application/x-kexiproject-shortcut.desktop
-#%{_datadir}/mimelnk/application/x-kexiproject-sqlite**.desktop
-#%{_datadir}/mimelnk/application/x-kexi-connectiondata.desktop
-#%{_datadir}/services/kexi*
-#%{_datadir}/services/kformdesigner
-#%{_desktopdir}/kde/kexi.desktop
-#%{_iconsdir}/hicolor/*/apps/kexi.*
-#%{_iconsdir}/crystalsvg/*/mimetypes/kexiproject_*.png
-#%{_mandir}/man1/*
-#
 #%files kformula
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kformula
 #%attr(755,root,root) %{_libdir}/libkdeinit4_kformula*.so
-#%{_libdir}/kde3/libkfo*.la
-#%attr(755,root,root) %{_libdir}/kde3/libkfo*.so
-#%{_libdir}/kde3/kformula.la
-#%attr(755,root,root) %{_libdir}/kde3/kformula.so
+#%{_libdir}/kde4/libkfo*.la
+#%attr(755,root,root) %{_libdir}/kde4/libkfo*.so
+#%{_libdir}/kde4/kformula.la
+#%attr(755,root,root) %{_libdir}/kde4/kformula.so
 #%{_datadir}/apps/kformula
 #%{_datadir}/services/kformula*
 #%{_datadir}/apps/konqueror/servicemenus/kformula_konqi.desktop
@@ -590,10 +529,10 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_libdir}/libkiviocommon.so.*.*.*
 #%attr(755,root,root) %ghost %{_libdir}/libkiviocommon.so.0
 #%attr(755,root,root) %{_libdir}/libkdeinit4_kivio.so
-#%{_libdir}/kde3/*kivio*.la
-#%attr(755,root,root) %{_libdir}/kde3/*kivio*.so
-#%{_libdir}/kde3/straight_connector.la
-#%attr(755,root,root) %{_libdir}/kde3/straight_connector.so
+#%{_libdir}/kde4/*kivio*.la
+#%attr(755,root,root) %{_libdir}/kde4/*kivio*.so
+#%{_libdir}/kde4/straight_connector.la
+#%attr(755,root,root) %{_libdir}/kde4/straight_connector.so
 #%{_datadir}/apps/kivio
 #%{_datadir}/apps/konqueror/servicemenus/kivio_konqi.desktop
 #%{_datadir}/config.kcfg/kivio.kcfg
@@ -605,10 +544,10 @@ rm -rf $RPM_BUILD_ROOT
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kplato
 #%attr(755,root,root) %{_libdir}/libkdeinit4_kplato.so
-#%{_libdir}/kde3/kplato.la
-#%attr(755,root,root) %{_libdir}/kde3/kplato.so
-#%{_libdir}/kde3/libkplatopart.la
-#%attr(755,root,root) %{_libdir}/kde3/libkplatopart.so
+#%{_libdir}/kde4/kplato.la
+#%attr(755,root,root) %{_libdir}/kde4/kplato.so
+#%{_libdir}/kde4/libkplatopart.la
+#%attr(755,root,root) %{_libdir}/kde4/libkplatopart.so
 #%{_datadir}/apps/kplato
 #%{_datadir}/services/kplatopart.desktop
 #%{_desktopdir}/kde/kplato.desktop
@@ -625,16 +564,16 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
 #%attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.4
 #%attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
-#%{_libdir}/kde3/kpresenter.la
-#%attr(755,root,root) %{_libdir}/kde3/kpresenter.so
-#%{_libdir}/kde3/libkpresenter*.la
-#%attr(755,root,root) %{_libdir}/kde3/libkpresenter*.so
-#%{_libdir}/kde3/libkprkword.la
-#%attr(755,root,root) %{_libdir}/kde3/libkprkword.so
-#%{_libdir}/kde3/libooimpress*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libooimpress*port.so
-#%{_libdir}/kde3/libpowerpointimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libpowerpointimport.so
+#%{_libdir}/kde4/kpresenter.la
+#%attr(755,root,root) %{_libdir}/kde4/kpresenter.so
+#%{_libdir}/kde4/libkpresenter*.la
+#%attr(755,root,root) %{_libdir}/kde4/libkpresenter*.so
+#%{_libdir}/kde4/libkprkword.la
+#%attr(755,root,root) %{_libdir}/kde4/libkprkword.so
+#%{_libdir}/kde4/libooimpress*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libooimpress*port.so
+#%{_libdir}/kde4/libpowerpointimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
 #%{_datadir}/apps/kpresenter
 #%{_datadir}/apps/konqueror/servicemenus/kpresenter_konqi.desktop
 #%{_datadir}/templates/.source/Presentation.kpt
@@ -665,8 +604,8 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %ghost %{_libdir}/libkritascripting.so.0
 #%attr(755,root,root) %ghost %{_libdir}/libkritaui.so.1
 #%attr(755,root,root) %{_libdir}/libkdeinit4_krita.so
-#%{_libdir}/kde3/*krita*.la
-#%attr(755,root,root) %{_libdir}/kde3/*krita*.so
+#%{_libdir}/kde4/*krita*.la
+#%attr(755,root,root) %{_libdir}/kde4/*krita*.so
 #%{_datadir}/apps/konqueror/servicemenus/krita_konqi.desktop
 #%{_datadir}/apps/krita
 #%{_datadir}/apps/kritaplugins
@@ -678,46 +617,46 @@ rm -rf $RPM_BUILD_ROOT
 #
 #%files kross-python
 #%defattr(644,root,root,755)
-#%attr(755,root,root) %{_libdir}/kde3/krosspython.so
-#%{_libdir}/kde3/krosspython.la
+#%attr(755,root,root) %{_libdir}/kde4/krosspython.so
+#%{_libdir}/kde4/krosspython.la
 #%{_datadir}/apps/kross/python
 #
 #%files kross-ruby
 #%defattr(644,root,root,755)
-#%attr(755,root,root) %{_libdir}/kde3/krossruby.so
-#%{_libdir}/kde3/krossruby.la
+#%attr(755,root,root) %{_libdir}/kde4/krossruby.so
+#%{_libdir}/kde4/krossruby.la
 #
 #%files kspread
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kspread
 #%{_libdir}/libkdeinit_kspread.la
 #%attr(755,root,root) %{_libdir}/libkdeinit_kspread.so
-#%{_libdir}/kde3/kspread.la
-#%attr(755,root,root) %{_libdir}/kde3/kspread.so
-#%{_libdir}/kde3/krosskspreadcore.la
-#%attr(755,root,root) %{_libdir}/kde3/krosskspreadcore.so
-#%{_libdir}/kde3/kspreadscripting.la
-#%attr(755,root,root) %{_libdir}/kde3/kspreadscripting.so
-#%{_libdir}/kde3/libkspread*.la
-#%attr(755,root,root) %{_libdir}/kde3/libkspread*.so
-#%{_libdir}/kde3/libcsv*.la
-#%attr(755,root,root) %{_libdir}/kde3/libcsv*.so
-#%{_libdir}/kde3/libapplixspreadimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libapplixspreadimport.so
-#%{_libdir}/kde3/libexcelimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libexcelimport.so
-#%{_libdir}/kde3/kfile_gnumeric.la
-#%attr(755,root,root) %{_libdir}/kde3/kfile_gnumeric.so
-#%{_libdir}/kde3/libgnumeric*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libgnumeric*port.so
-#%{_libdir}/kde3/libdbase*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libdbase*port.so
-#%{_libdir}/kde3/libqproimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libqproimport.so
-#%{_libdir}/kde3/libopencalc*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libopencalc*port.so
-#%{_libdir}/kde3/kwmailmerge_kspread.la
-#%attr(755,root,root) %{_libdir}/kde3/kwmailmerge_kspread.so
+#%{_libdir}/kde4/kspread.la
+#%attr(755,root,root) %{_libdir}/kde4/kspread.so
+#%{_libdir}/kde4/krosskspreadcore.la
+#%attr(755,root,root) %{_libdir}/kde4/krosskspreadcore.so
+#%{_libdir}/kde4/kspreadscripting.la
+#%attr(755,root,root) %{_libdir}/kde4/kspreadscripting.so
+#%{_libdir}/kde4/libkspread*.la
+#%attr(755,root,root) %{_libdir}/kde4/libkspread*.so
+#%{_libdir}/kde4/libcsv*.la
+#%attr(755,root,root) %{_libdir}/kde4/libcsv*.so
+#%{_libdir}/kde4/libapplixspreadimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libapplixspreadimport.so
+#%{_libdir}/kde4/libexcelimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libexcelimport.so
+#%{_libdir}/kde4/kfile_gnumeric.la
+#%attr(755,root,root) %{_libdir}/kde4/kfile_gnumeric.so
+#%{_libdir}/kde4/libgnumeric*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libgnumeric*port.so
+#%{_libdir}/kde4/libdbase*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libdbase*port.so
+#%{_libdir}/kde4/libqproimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libqproimport.so
+#%{_libdir}/kde4/libopencalc*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libopencalc*port.so
+#%{_libdir}/kde4/kwmailmerge_kspread.la
+#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_kspread.so
 #%{_datadir}/apps/kspread
 #%{_datadir}/apps/konqueror/servicemenus/kspread_konqi.desktop
 #%{_datadir}/services/kfile_gnumeric.desktop
@@ -741,10 +680,10 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_libdir}/libkdeinit_kugar.so
 #%{_libdir}/libkudesignercore.la
 #%attr(755,root,root) %{_libdir}/libkudesignercore.so
-#%{_libdir}/kde3/*kugar*.la
-#%attr(755,root,root) %{_libdir}/kde3/*kugar*.so
-#%{_libdir}/kde3/*kudesigner*.la
-#%attr(755,root,root) %{_libdir}/kde3/*kudesigner*.so
+#%{_libdir}/kde4/*kugar*.la
+#%attr(755,root,root) %{_libdir}/kde4/*kugar*.so
+#%{_libdir}/kde4/*kudesigner*.la
+#%attr(755,root,root) %{_libdir}/kde4/*kudesigner*.so
 #%{_desktopdir}/kde/kudesigner.desktop
 #%{_desktopdir}/kde/kugar.desktop
 #%{_datadir}/apps/kudesigner
@@ -769,52 +708,52 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.1
 #%{_libdir}/libkdeinit_kthesaurus.la
 #%attr(755,root,root) %{_libdir}/libkdeinit_kthesaurus.so
-#%{_libdir}/kde3/kthesaurus.la
-#%attr(755,root,root) %{_libdir}/kde3/kthesaurus.so
-#%{_libdir}/kde3/kword.la
-#%attr(755,root,root) %{_libdir}/kde3/kword.so
-#%{_libdir}/kde3/kfile_abiword.la
-#%attr(755,root,root) %{_libdir}/kde3/kfile_abiword.so
-#%{_libdir}/kde3/libabiword*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libabiword*port.so
-#%{_libdir}/kde3/libhancomwordimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libhancomwordimport.so
-#%{_libdir}/kde3/libmswordimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libmswordimport.so
-#%{_libdir}/kde3/libapplixwordimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libapplixwordimport.so
-#%{_libdir}/kde3/libascii*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libascii*port.so
-#%{_libdir}/kde3/libdocbookexport.la
-#%attr(755,root,root) %{_libdir}/kde3/libdocbookexport.so
-#%{_libdir}/kde3/libhtml*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libhtml*port.so
-#%{_libdir}/kde3/libpalmdoc*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libpalmdoc*port.so
-#%{_libdir}/kde3/libamipro*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libamipro*port.so
-#%{_libdir}/kde3/libpdfimport.la
-#%attr(755,root,root) %{_libdir}/kde3/libpdfimport.so
-#%{_libdir}/kde3/libwml*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libwml*port.so
-#%{_libdir}/kde3/librtf*port.la
-#%attr(755,root,root) %{_libdir}/kde3/librtf*port.so
-#%{_libdir}/kde3/libthesaurustool.la
-#%attr(755,root,root) %{_libdir}/kde3/libthesaurustool.so
-#%{_libdir}/kde3/libwp*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libwp*port.so
-#%{_libdir}/kde3/libmswrite*port.la
-#%attr(755,root,root) %{_libdir}/kde3/libmswrite*port.so
-#%{_libdir}/kde3/libkword*.la
-#%attr(755,root,root) %{_libdir}/kde3/libkword*.so
-#%{_libdir}/kde3/liboowriter*port.la
-#%attr(755,root,root) %{_libdir}/kde3/liboowriter*port.so
-#%{_libdir}/kde3/kwmailmerge_classic.la
-#%attr(755,root,root) %{_libdir}/kde3/kwmailmerge_classic.so
-#%{_libdir}/kde3/kwmailmerge_kabc.la
-#%attr(755,root,root) %{_libdir}/kde3/kwmailmerge_kabc.so
-#%{_libdir}/kde3/kwmailmerge_qtsqldb*.la
-#%attr(755,root,root) %{_libdir}/kde3/kwmailmerge_qtsqldb*.so
+#%{_libdir}/kde4/kthesaurus.la
+#%attr(755,root,root) %{_libdir}/kde4/kthesaurus.so
+#%{_libdir}/kde4/kword.la
+#%attr(755,root,root) %{_libdir}/kde4/kword.so
+#%{_libdir}/kde4/kfile_abiword.la
+#%attr(755,root,root) %{_libdir}/kde4/kfile_abiword.so
+#%{_libdir}/kde4/libabiword*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libabiword*port.so
+#%{_libdir}/kde4/libhancomwordimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libhancomwordimport.so
+#%{_libdir}/kde4/libmswordimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libmswordimport.so
+#%{_libdir}/kde4/libapplixwordimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libapplixwordimport.so
+#%{_libdir}/kde4/libascii*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libascii*port.so
+#%{_libdir}/kde4/libdocbookexport.la
+#%attr(755,root,root) %{_libdir}/kde4/libdocbookexport.so
+#%{_libdir}/kde4/libhtml*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libhtml*port.so
+#%{_libdir}/kde4/libpalmdoc*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libpalmdoc*port.so
+#%{_libdir}/kde4/libamipro*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libamipro*port.so
+#%{_libdir}/kde4/libpdfimport.la
+#%attr(755,root,root) %{_libdir}/kde4/libpdfimport.so
+#%{_libdir}/kde4/libwml*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libwml*port.so
+#%{_libdir}/kde4/librtf*port.la
+#%attr(755,root,root) %{_libdir}/kde4/librtf*port.so
+#%{_libdir}/kde4/libthesaurustool.la
+#%attr(755,root,root) %{_libdir}/kde4/libthesaurustool.so
+#%{_libdir}/kde4/libwp*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libwp*port.so
+#%{_libdir}/kde4/libmswrite*port.la
+#%attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
+#%{_libdir}/kde4/libkword*.la
+#%attr(755,root,root) %{_libdir}/kde4/libkword*.so
+#%{_libdir}/kde4/liboowriter*port.la
+#%attr(755,root,root) %{_libdir}/kde4/liboowriter*port.so
+#%{_libdir}/kde4/kwmailmerge_classic.la
+#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_classic.so
+#%{_libdir}/kde4/kwmailmerge_kabc.la
+#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_kabc.so
+#%{_libdir}/kde4/kwmailmerge_qtsqldb*.la
+#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_qtsqldb*.so
 #%{_datadir}/apps/kword
 #%{_datadir}/apps/thesaurus
 #%dir %{_datadir}/apps/xsltfilter

@@ -482,28 +482,23 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/templates/.source
 %{_desktopdir}/kde4/koffice.desktop
 
-#%files karbon
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/karbon
-#%{_libdir}/libkarbon*.la
-#%attr(755,root,root) %{_libdir}/libkarbon*.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkarboncommon.so.0
-#%attr(755,root,root) %{_libdir}/libkdeinit4_karbon.so
-#%{_libdir}/kde3/liboodrawimport.la
-#%attr(755,root,root) %{_libdir}/kde3/liboodrawimport.so
-#%{_libdir}/kde3/*karbon*.la
-#%attr(755,root,root) %{_libdir}/kde3/*karbon*.so
-#%{_libdir}/kde3/*wmf*port.la
-#%attr(755,root,root) %{_libdir}/kde3/*wmf*port.so
-#%{_datadir}/apps/karbon
-#%{_datadir}/apps/konqueror/servicemenus/karbon_konqi.desktop
-#%{_datadir}/services/karbon*
-#%{_datadir}/templates/.source/Illustration.karbon
-#%{_datadir}/templates/Illustration.desktop
-#%{_desktopdir}/kde/karbon.desktop
-#%{_iconsdir}/*/*/apps/karbon.png
-#%{_iconsdir}/hicolor/scalable/apps/karbon.svgz
-#
+%files karbon
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/karbon
+%attr(755,root,root) %{_libdir}/libkarboncommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkarboncommon.so.?
+%attr(755,root,root) %{_libdir}/libkarbonui.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkarbonui.so.?
+%attr(755,root,root) %{_libdir}/libkdeinit4_karbon.so
+%attr(755,root,root) %{_libdir}/kde4/*karbon*.so
+%attr(755,root,root) %{_libdir}/kde4/*wmf*port.so
+%{_datadir}/apps/karbon
+%{_datadir}/kde4/services/karbon*
+%{_datadir}/templates/.source/Illustration.karbon
+%{_datadir}/templates/Illustration.desktop
+%{_desktopdir}/kde4/karbon.desktop
+#%{_iconsdir}/oxygen/*/apps/karbon.png
+
 #%files kchart
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kchart

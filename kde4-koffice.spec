@@ -56,7 +56,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KOffice is an integrated office suite for K Desktop Environment.
 KOffice contains:
 - KWord - word processor
-- KFormula - formula editor
 - KSpread - spreadsheet
 - KPresenter - presentations
 - Kivio - A Visio(R)-style flowcharting application
@@ -69,14 +68,12 @@ KOffice contains:
 KOffice jest zintegrowanym pakietem biurowym dla środowiska KDE.
 Pakiet między innymi zawiera:
 - KWord - procesor tekstu
-- KFormula - edytor równań
 - KSpread - arkusz kalkulacyjny
 - KPresenter - tworzenie prezentacji
 - Kivio - aplikacja wzorowana na Visio(R)
 - KChart - generator wykresów
 - Karbon - aplikacja do edycji grafiki wektorowej
 - Krita - aplikacja do edycji grafiki bitmapowej
-- Kugar - narzędzie do generowania raportów jakości biznesowej
 
 %description -l ru.UTF-8
 Оффисные программы для K Desktop Environment 2.0. Содержит: KWord
@@ -119,14 +116,12 @@ Requires:	kdebase-core >= 9:3.2.0
 KOffice is an integrated office suite for K Desktop Environment.
 KOffice contains:
 - KWord - word processor
-- KFormula - formula editor
 - KSpread - spreadsheet
 - KPresenter - presentations
 - Kivio - A Visio(R)-style flowcharting application
 - KChart - diagram generator
 - Karbon - A vector-based drawing application
 - Krita - A pixel-based drawing application
-- Kugar - A tool for generating business quality reports
 
 Package contains common files and libraries needs by KOffice
 applications.
@@ -135,14 +130,12 @@ applications.
 KOffice jest zintegrowanym pakietem biurowym dla środowiska KDE.
 Pakiet między innymi zawiera:
 - KWord - procesor tekstu
-- KFormula - edytor równań
 - KSpread - arkusz kalkulacyjny
 - KPresenter - tworzenie prezentacji
 - Kivio - aplikacja wzorowana na Visio(R)
 - KChart - generator wykresów
 - Karbon - aplikacja do edycji grafiki wektorowej
 - Krita - aplikacja do edycji grafiki bitmapowej
-- Kugar - narzędzie do generowania raportów jakości biznesowej
 
 Pakiet zawiera wspólne pliki i biblioteki wymagane przez aplikacje
 KOffice.
@@ -178,18 +171,6 @@ KChart jest aplikacją służącą do generowania wykresów.
 
 %description kchart -l pt_BR.UTF-8
 Gerador de diagramas do KOffice.
-
-%package kformula
-Summary:	KOffice - kformula
-Summary(pl.UTF-8):	KOffice - kformula
-Group:		X11/Applications
-Requires:	%{name}-common = %{version}-%{release}
-
-%description kformula
-KFormula is KOffice part for creating formulas, equations, etc...
-
-%description kformula -l pl.UTF-8
-KFormula jest aplikacją służącą do tworzenia wzorów, równań, itp.
 
 %package kivio
 Summary:	KOffice - kivio
@@ -301,28 +282,6 @@ KSpread jest arkuszem kalkulacyjnym, podobnym do MS Excel.
 %description kspread -l pt_BR.UTF-8
 Planilha eletrônica do KOffice.
 
-%package kugar
-Summary:	KOffice - KUgar
-Summary(pl.UTF-8):	KOffice - KUgar
-Summary(pt_BR.UTF-8):	Gerador de relatórios do KOffice
-Group:		X11/Applications
-Requires:	%{name}-common = %{version}-%{release}
-
-%description kugar
-Kugar is a KDE tool for generating business quality reports which can
-be viewed and printed. It includes a standalone report application can
-embed the report viewing functionality and that reports can be viewed
-using the Konqueror browser.
-
-%description kugar -l pl.UTF-8
-Kugar jest narzędziem KDE do generowania raportów o jakości
-biznesowej, które mogą być przeglądane oraz drukowane. Dodatkowo
-dołączony jest program który może być dołączony do raportu
-umożliwiając oglądanie raportu w przeglądarce Konqueror.
-
-%description kugar -l pt_BR.UTF-8
-Gerador de relatórios do KOffice.
-
 %package kword
 Summary:	KOffice - KWord
 Summary(pl.UTF-8):	KOffice - KWord
@@ -397,9 +356,6 @@ rm -rf $RPM_BUILD_ROOT
 %post   kchart -p /sbin/ldconfig
 %postun kchart -p /sbin/ldconfig
 
-%post	kexi -p /sbin/ldconfig
-%postun	kexi -p /sbin/ldconfig
-
 %post	kivio -p /sbin/ldconfig
 %postun	kivio -p /sbin/ldconfig
 
@@ -414,9 +370,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %post   kspread -p /sbin/ldconfig
 %postun kspread -p /sbin/ldconfig
-
-%post   kugar -p /sbin/ldconfig
-%postun kugar -p /sbin/ldconfig
 
 %post   kword -p /sbin/ldconfig
 %postun kword -p /sbin/ldconfig
@@ -492,36 +445,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kchart*.desktop
 #%{_iconsdir}/*/*x*/apps/kchart.png
 
-#%files kformula
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kformula
-#%attr(755,root,root) %{_libdir}/libkdeinit4_kformula*.so
-#%{_libdir}/kde4/libkfo*.la
-#%attr(755,root,root) %{_libdir}/kde4/libkfo*.so
-#%{_libdir}/kde4/kformula.la
-#%attr(755,root,root) %{_libdir}/kde4/kformula.so
-#%{_datadir}/apps/kformula
-#%{_datadir}/services/kformula*
-#%{_datadir}/apps/konqueror/servicemenus/kformula_konqi.desktop
-#%{_desktopdir}/kde/kformula.desktop
-#%{_iconsdir}/*/*/actions/abs.png
-#%{_iconsdir}/*/*/actions/brac*.png
-#%{_iconsdir}/*/*/actions/frac.png
-#%{_iconsdir}/*/*/actions/ins*.png
-#%{_iconsdir}/*/*/actions/rem*.png
-#%{_iconsdir}/*/*/actions/int.png
-#%{_iconsdir}/*/*/actions/[lr]su[bp].png
-#%{_iconsdir}/*/*/actions/matrix.png
-#%{_iconsdir}/*/*/actions/paren.png
-#%{_iconsdir}/*/*/actions/prod.png
-#%{_iconsdir}/*/*/actions/sqrt.png
-#%{_iconsdir}/*/*/actions/sum.png
-#%{_iconsdir}/*/*/actions/onetwomatrix.png
-#%{_iconsdir}/*/*/actions/multiline.png
-#%{_iconsdir}/*/*/actions/over.png
-#%{_iconsdir}/*/*/actions/under.png
-#%{_iconsdir}/*/*/apps/kformula.png
-#
 #%files kivio
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kivio

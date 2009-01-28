@@ -152,18 +152,14 @@ Pakiet między innymi zawiera:
 - Krita - aplikacja do edycji grafiki bitmapowej
 
 %description -l ru.UTF-8
-Оффисные программы для K Desktop Environment 2.0.
-Содержит: KWord (текстовый процессор),
-KSpread (электронная таблица), KPresenter
-(презентации) и KChart (генератор
-диаграмм).
+Оффисные программы для K Desktop Environment 2.0. Содержит: KWord
+(текстовый процессор), KSpread (электронная таблица), KPresenter
+(презентации) и KChart (генератор диаграмм).
 
 %description -l uk.UTF-8
-Офісні програми для K Desktop Environment 2.0.
-Містить: KWord (текстовий процесор), KSpread
-(електронна таблиця), KPresenter
-(презентації) та KChart (генератор
-діаграм).
+Офісні програми для K Desktop Environment 2.0. Містить: KWord
+(текстовий процесор), KSpread (електронна таблиця), KPresenter
+(презентації) та KChart (генератор діаграм).
 
 %package devel
 Summary:	KOffice - header files
@@ -182,8 +178,8 @@ Ten pakiet zawiera pliki nagłówkowe potrzebne przy kompilowaniu
 programów używających bibliotek KOffice.
 
 %description devel -l pt_BR.UTF-8
-Arquivos de inclusão necessários à compilação de aplicações que
-usem as bibliotecas do koffice.
+Arquivos de inclusão necessários à compilação de aplicações que usem
+as bibliotecas do koffice.
 
 %package common
 Summary:	KOffice - common files and libraries
@@ -233,8 +229,7 @@ Requires:	%{name}-common = %{version}-%{release}
 Karbon is a vector graphics application within koffice.
 
 %description karbon -l pl.UTF-8
-Karbon to aplikacja koffice służąca do rysowania grafiki
-wektorowej,
+Karbon to aplikacja koffice służąca do rysowania grafiki wektorowej,
 
 %package kchart
 Summary:	KOffice - KChart
@@ -288,11 +283,10 @@ Kivio jest programem typu flowcharting. Pod tym pojęciem jednak kryje
 się znacznie więcej. Kivio dostarcza najpotrzebniejsze funkcje, ale
 wszystkie obiekty można rozszerzać za pomocą języka skryptowego, a
 system wtyczek backendowych oferuje możliwość tworzenia obiektów
-dotyczących prawie wszystkiego. Kivio można nakarmić katalogiem
-plików nagłówkowych C++ lub plików Javy i pozwolić wygenerować
-graficzną mapę klas. Po podaniu sieci przejrzy ją i stworzy jej
-mapę. Wszystko to jest możliwe poprzez architekturę skryptów i
-wtyczek Kivio.
+dotyczących prawie wszystkiego. Kivio można nakarmić katalogiem plików
+nagłówkowych C++ lub plików Javy i pozwolić wygenerować graficzną mapę
+klas. Po podaniu sieci przejrzy ją i stworzy jej mapę. Wszystko to
+jest możliwe poprzez architekturę skryptów i wtyczek Kivio.
 
 %description kivio -l pt_BR.UTF-8
 Editor de fluxogramas do KOffice.
@@ -318,9 +312,8 @@ PowerPoint in the windows world. You can use it for doing screen
 presentations or transparencies.
 
 %description kpresenter -l pl.UTF-8
-KPresenter jest aplikacją KOffice do tworzenia prezentacji, podobną
-do MS PowerPoint. Możesz użyć jej do tworzenia wizualnych
-prezentacji.
+KPresenter jest aplikacją KOffice do tworzenia prezentacji, podobną do
+MS PowerPoint. Możesz użyć jej do tworzenia wizualnych prezentacji.
 
 %package krita
 Summary:	KOffice - Krita
@@ -336,8 +329,8 @@ LMS, in 8 and 16 bits per channel
 
 %description krita -l pl.UTF-8
 Krita jest aplikacją do edycji grafiki bitmapowej. Wspiera różne
-przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR oraz
-LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
+przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR
+oraz LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
 
 %package kross-python
 Summary:	KOffice - Kross Python
@@ -391,8 +384,7 @@ writing letters, reports, etc.).
 
 %description kword -l pl.UTF-8
 KWord jest ramkowym procesorem tekstu. Może być użyty do DTP, ale
-również do zwykłej edycji tekstu (jak pisanie listów, raportów,
-itp.).
+również do zwykłej edycji tekstu (jak pisanie listów, raportów, itp.).
 
 %description kword -l pt_BR.UTF-8
 Processador de texto do KOffice.

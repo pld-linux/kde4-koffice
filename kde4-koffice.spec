@@ -418,6 +418,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/servicetypes/*
 %dir %{_datadir}/templates/.source
 %{_desktopdir}/kde4/koffice.desktop
+%{_kdedocdir}/en/koffice
 
 %files karbon
 %defattr(644,root,root,755)
@@ -435,6 +436,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/Illustration.desktop
 %{_desktopdir}/kde4/karbon.desktop
 #%{_iconsdir}/oxygen/*/apps/karbon.png
+%{_kdedocdir}/en/karbon
 
 %files kchart
 %defattr(644,root,root,755)
@@ -444,6 +446,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kchart
 %{_datadir}/kde4/services/kchart*.desktop
 #%{_iconsdir}/*/*x*/apps/kchart.png
+%{_kdedocdir}/en/kchart
 
 #%files kivio
 #%defattr(644,root,root,755)
@@ -629,3 +632,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/kword.desktop
 %{_iconsdir}/*/*/apps/kword.png
 %{_kdedocdir}/en/kword
+%{_kdedocdir}/en/thesaurus

@@ -76,14 +76,18 @@ Pakiet między innymi zawiera:
 - Krita - aplikacja do edycji grafiki bitmapowej
 
 %description -l ru.UTF-8
-Оффисные программы для K Desktop Environment 2.0. Содержит: KWord
-(текстовый процессор), KSpread (электронная таблица), KPresenter
-(презентации) и KChart (генератор диаграмм).
+Оффисные программы для K Desktop Environment 2.0.
+Содержит: KWord (текстовый процессор),
+KSpread (электронная таблица), KPresenter
+(презентации) и KChart (генератор
+диаграмм).
 
 %description -l uk.UTF-8
-Офісні програми для K Desktop Environment 2.0. Містить: KWord
-(текстовий процесор), KSpread (електронна таблиця), KPresenter
-(презентації) та KChart (генератор діаграм).
+Офісні програми для K Desktop Environment 2.0.
+Містить: KWord (текстовий процесор), KSpread
+(електронна таблиця), KPresenter
+(презентації) та KChart (генератор
+діаграм).
 
 %package devel
 Summary:	KOffice - header files
@@ -102,8 +106,8 @@ Ten pakiet zawiera pliki nagłówkowe potrzebne przy kompilowaniu
 programów używających bibliotek KOffice.
 
 %description devel -l pt_BR.UTF-8
-Arquivos de inclusão necessários à compilação de aplicações que usem
-as bibliotecas do koffice.
+Arquivos de inclusão necessários à compilação de aplicações que
+usem as bibliotecas do koffice.
 
 %package common
 Summary:	KOffice - common files and libraries
@@ -153,7 +157,8 @@ Requires:	%{name}-common = %{version}-%{release}
 Karbon is a vector graphics application within koffice.
 
 %description karbon -l pl.UTF-8
-Karbon to aplikacja koffice służąca do rysowania grafiki wektorowej,
+Karbon to aplikacja koffice służąca do rysowania grafiki
+wektorowej,
 
 %package kchart
 Summary:	KOffice - KChart
@@ -171,6 +176,18 @@ KChart jest aplikacją służącą do generowania wykresów.
 
 %description kchart -l pt_BR.UTF-8
 Gerador de diagramas do KOffice.
+
+%package kformula
+Summary:        KOffice - kformula
+Summary(pl.UTF-8):      KOffice - kformula
+Group:          X11/Applications
+Requires:       %{name}-common = %{version}-%{release}
+
+%description kformula
+KFormula is KOffice part for creating formulas, equations, etc...
+
+%description kformula -l pl.UTF-8
+KFormula jest aplikacj�~E s�~Buż�~Ec�~E do tworzenia wzorów, równa�~D, itp.
 
 %package kivio
 Summary:	KOffice - kivio
@@ -195,10 +212,11 @@ Kivio jest programem typu flowcharting. Pod tym pojęciem jednak kryje
 się znacznie więcej. Kivio dostarcza najpotrzebniejsze funkcje, ale
 wszystkie obiekty można rozszerzać za pomocą języka skryptowego, a
 system wtyczek backendowych oferuje możliwość tworzenia obiektów
-dotyczących prawie wszystkiego. Kivio można nakarmić katalogiem plików
-nagłówkowych C++ lub plików Javy i pozwolić wygenerować graficzną mapę
-klas. Po podaniu sieci przejrzy ją i stworzy jej mapę. Wszystko to
-jest możliwe poprzez architekturę skryptów i wtyczek Kivio.
+dotyczących prawie wszystkiego. Kivio można nakarmić katalogiem
+plików nagłówkowych C++ lub plików Javy i pozwolić wygenerować
+graficzną mapę klas. Po podaniu sieci przejrzy ją i stworzy jej
+mapę. Wszystko to jest możliwe poprzez architekturę skryptów i
+wtyczek Kivio.
 
 %description kivio -l pt_BR.UTF-8
 Editor de fluxogramas do KOffice.
@@ -224,8 +242,9 @@ PowerPoint in the windows world. You can use it for doing screen
 presentations or transparencies.
 
 %description kpresenter -l pl.UTF-8
-KPresenter jest aplikacją KOffice do tworzenia prezentacji, podobną do
-MS PowerPoint. Możesz użyć jej do tworzenia wizualnych prezentacji.
+KPresenter jest aplikacją KOffice do tworzenia prezentacji, podobną
+do MS PowerPoint. Możesz użyć jej do tworzenia wizualnych
+prezentacji.
 
 %package krita
 Summary:	KOffice - Krita
@@ -241,8 +260,8 @@ LMS, in 8 and 16 bits per channel
 
 %description krita -l pl.UTF-8
 Krita jest aplikacją do edycji grafiki bitmapowej. Wspiera różne
-przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR
-oraz LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
+przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR oraz
+LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
 
 %package kross-python
 Summary:	KOffice - Kross Python
@@ -296,7 +315,8 @@ writing letters, reports, etc.).
 
 %description kword -l pl.UTF-8
 KWord jest ramkowym procesorem tekstu. Może być użyty do DTP, ale
-również do zwykłej edycji tekstu (jak pisanie listów, raportów, itp.).
+również do zwykłej edycji tekstu (jak pisanie listów, raportów,
+itp.).
 
 %description kword -l pt_BR.UTF-8
 Processador de texto do KOffice.
@@ -328,11 +348,11 @@ Zawiera:
 install -d build
 cd build
 %cmake \
-        -DCMAKE_INSTALL_PREFIX=%{_prefix} \
+	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 %if "%{_lib}" == "lib64"
-        -DLIB_SUFFIX=64 \
+	-DLIB_SUFFIX=64 \
 %endif
-        ../
+	../
 
 %{__make}
 
@@ -355,9 +375,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %post   kchart -p /sbin/ldconfig
 %postun kchart -p /sbin/ldconfig
-
-%post	kivio -p /sbin/ldconfig
-%postun	kivio -p /sbin/ldconfig
 
 %post	kplato -p /sbin/ldconfig
 %postun	kplato -p /sbin/ldconfig
@@ -409,10 +426,18 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libgenerickofilter.so
 %attr(755,root,root) %{_libdir}/kde4/libxslt*port*.so
 %attr(755,root,root) %{_libdir}/kde4/libkounavailpart.so
+%attr(755,root,root) %{_libdir}/kde4/koffice_graya_u16_plugin.so
+%attr(755,root,root) %{_libdir}/kde4/kofficedockers.so
+%attr(755,root,root) %{_libdir}/kde4/kofficegrayau8plugin.so
+%attr(755,root,root) %{_libdir}/kde4/kofficesimpletextedit.so
 %{_datadir}/apps/koffice
 %{_datadir}/kde4/services/clipartthumbnail.desktop
 %{_datadir}/kde4/services/kodocinfopropspage.desktop
 %{_datadir}/kde4/services/kofficethumbnail.desktop
+%{_datadir}/kde4/services/koffice_graya_u16_plugin.desktop
+%{_datadir}/kde4/services/kofficedockers.desktop
+%{_datadir}/kde4/services/kofficegrayaplugin.desktop
+%{_datadir}/kde4/services/kofficesimpletextedit.desktop
 %{_datadir}/kde4/services/kounavail.desktop
 %{_datadir}/kde4/services/xslt_*.desktop
 %{_datadir}/kde4/services/generic_filter.desktop
@@ -436,78 +461,88 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/.source/Illustration.karbon
 %{_datadir}/templates/Illustration.desktop
 %{_desktopdir}/kde4/karbon.desktop
+%{_datadir}/kde4/services/ServiceMenus/karbon_konqi.desktop
 #%{_iconsdir}/oxygen/*/apps/karbon.png
 %{_kdedocdir}/en/karbon
 
 %files kchart
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libkchartcommon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkchartcommon.so.?
+%attr(755,root,root) %{_libdir}/libkchartcommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libchartshapelib.so.?
+%attr(755,root,root) %{_libdir}/libchartshapelib.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/libkchart*.so
+%attr(755,root,root) %{_libdir}/kde4/chartshape.so
 %{_datadir}/apps/kchart
 %{_datadir}/kde4/services/kchart*.desktop
+%{_datadir}/kde4/services/chartshape.desktop
+%{_datadir}/kde4/services/ServiceMenus/kchart_konqi.desktop
 #%{_iconsdir}/*/*x*/apps/kchart.png
 %{_kdedocdir}/en/kchart
 
-#%files kivio
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kivio
-#%{_libdir}/libkiviocommon.la
-#%attr(755,root,root) %{_libdir}/libkiviocommon.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkiviocommon.so.0
-#%attr(755,root,root) %{_libdir}/libkdeinit4_kivio.so
-#%{_libdir}/kde4/*kivio*.la
-#%attr(755,root,root) %{_libdir}/kde4/*kivio*.so
-#%{_libdir}/kde4/straight_connector.la
-#%attr(755,root,root) %{_libdir}/kde4/straight_connector.so
-#%{_datadir}/apps/kivio
-#%{_datadir}/apps/konqueror/servicemenus/kivio_konqi.desktop
-#%{_datadir}/config.kcfg/kivio.kcfg
-#%{_datadir}/services/kivio*.desktop
-#%{_desktopdir}/kde/kivio.desktop
+%files kformula
+%defattr(644,root,root,755)
+%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
+%{_kdedocdir}/en/kformula
+
+%files kivio
+%defattr(644,root,root,755)
+%{_datadir}/kde4/services/ServiceMenus/kivio_konqi.desktop
 #%{_iconsdir}/*/*/apps/kivio.png
-#
+%{_kdedocdir}/en/kivio
+
 %files kplato
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kplato
 %attr(755,root,root) %{_libdir}/libkdeinit4_kplato.so
+%attr(755,root,root) %ghost %{_libdir}/libkplatokernel.so.?
+%attr(755,root,root) %{_libdir}/libkplatokernel.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatomodels.so.?
+%attr(755,root,root) %{_libdir}/libkplatomodels.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatoprivate.so.?
+%attr(755,root,root) %{_libdir}/libkplatoprivate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatoui.so.?
+%attr(755,root,root) %{_libdir}/libkplatoui.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/libkplatopart.so
 %{_datadir}/apps/kplato
 %{_datadir}/kde4/services/kplatopart.desktop
 %{_desktopdir}/kde4/kplato.desktop
+%{_datadir}/config/kplatorc
 #%{_iconsdir}/oxygen/*/apps/kplato.*
 %{_kdedocdir}/en/kplato
 
-#%files kpresenter
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kpresenter
-#%attr(755,root,root) %{_bindir}/kprconverter.pl
-#%{_libdir}/libkpresenterimageexport.la
-#%attr(755,root,root) %{_libdir}/libkpresenterimageexport.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkpresenterimageexport.so.4
-#%{_libdir}/libkpresenterprivate.la
-#%attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.4
-#%attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
-#%{_libdir}/kde4/kpresenter.la
-#%attr(755,root,root) %{_libdir}/kde4/kpresenter.so
-#%{_libdir}/kde4/libkpresenter*.la
-#%attr(755,root,root) %{_libdir}/kde4/libkpresenter*.so
-#%{_libdir}/kde4/libkprkword.la
-#%attr(755,root,root) %{_libdir}/kde4/libkprkword.so
-#%{_libdir}/kde4/libooimpress*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libooimpress*port.so
-#%{_libdir}/kde4/libpowerpointimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
-#%{_datadir}/apps/kpresenter
-#%{_datadir}/apps/konqueror/servicemenus/kpresenter_konqi.desktop
-#%{_datadir}/templates/.source/Presentation.kpt
-#%{_datadir}/templates/Presentation.desktop
-#%{_datadir}/services/kprkword.desktop
-#%{_datadir}/services/kpresenter*.desktop
-#%{_desktopdir}/kde/kpresenter.desktop
+%files kpresenter
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/kpresenter
+%attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.?
+%attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
+%attr(755,root,root) %{_libdir}/kde4/kpresenter*.so
+%attr(755,root,root) %{_libdir}/kde4/libkpresenter*.so
+%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_barwipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_clockwipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_edgewipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_iriswipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_matrixwipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_slidewipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_shapeanimation_example.so
+%{_datadir}/apps/kpresenter
+%{_datadir}/kde4/services/ServiceMenus/kpresenter_konqi.desktop
+%{_datadir}/templates/.source/Presentation.kpt
+%{_datadir}/templates/Presentation.desktop
+%{_datadir}/kde4/services/kpresenter*.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_barwipe.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_clockwipe.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_edgewipe.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_iriswipe.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_matrixwipe.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_slidewipe.desktop
+%{_datadir}/kde4/services/kpr_shapeanimation_example.desktop
+%{_desktopdir}/kde4/kpresenter.desktop
 #%{_iconsdir}/*/*/apps/kpresenter*.png
-#
+%{_kdedocdir}/en/kpresenter
+
 #%files krita
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/krita
@@ -622,6 +657,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/apps/xsltfilter/export/kword
 %dir %{_datadir}/apps/xsltfilter/export/kword/xslfo
 %{_datadir}/apps/xsltfilter/export/kword/xslfo/*.xsl
+%{_datadir}/kde4/services/ServiceMenus/kword_konqi.desktop
 %{_datadir}/kde4/services/kword*.desktop
 %{_datadir}/kde4/services/thesaurustool.desktop
 # this is the mailmerge service info for qtsqldb and classic

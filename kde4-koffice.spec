@@ -5,6 +5,80 @@
 # + OpenCTL, 0.9.2 or higher: OpenCTL is needed for some color spaces (High Dynamic Range Color Spaces, YCbCr and LMS) <http://www.openctl.org>
 # + Spnav: Spnav is the library which is required by the space navigator device plugin <http://spacenav.sourceforge.net/>
 # + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
+#
+# And files:
+#   /usr/lib64/kde4/artistictextshape.so
+#   /usr/lib64/kde4/autocorrect.so
+#   /usr/lib64/kde4/changecase.so
+#   /usr/lib64/kde4/defaulttools.so
+#   /usr/lib64/kde4/divineproportionshape.so
+#   /usr/lib64/kde4/kopabackgroundtool.so
+#   /usr/lib64/kde4/krossmodulekplato.so
+#   /usr/lib64/kde4/krossmodulekword.so
+#   /usr/lib64/kde4/libFilterkpr2odf.so
+#   /usr/lib64/kde4/musicshape.so
+#   /usr/lib64/kde4/pathshapes.so
+#   /usr/lib64/kde4/pictureshape.so
+#   /usr/lib64/kde4/spellcheck.so
+#   /usr/lib64/kde4/textshape.so
+#   /usr/lib64/kde4/textvariables.so
+#   /usr/lib64/libflake.so.5
+#   /usr/lib64/libflake.so.5.0.0
+#   /usr/lib64/libkoguiutils.so.5
+#   /usr/lib64/libkoguiutils.so.5.0.0
+#   /usr/lib64/libkokross.so.5
+#   /usr/lib64/libkokross.so.5.0.0
+#   /usr/lib64/libkomain.so.5
+#   /usr/lib64/libkomain.so.5.0.0
+#   /usr/lib64/libkoodf.so.5
+#   /usr/lib64/libkoodf.so.5.0.0
+#   /usr/lib64/libkoresources.so.5
+#   /usr/lib64/libkoresources.so.5.0.0
+#   /usr/lib64/libkostore.so.5
+#   /usr/lib64/libkostore.so.5.0.0
+#   /usr/lib64/libpigmentcms.so.5
+#   /usr/lib64/libpigmentcms.so.5.0.0
+#   /usr/share/apps/musicshape/fonts/Emmentaler-14.ttf
+#   /usr/share/color/icc/pigment/CMY.icm
+#   /usr/share/color/icc/pigment/cmyk.icm
+#   /usr/share/icons/hicolor/128x128/apps/kplato.png
+#   /usr/share/icons/hicolor/128x128/mimetypes/application-x-vnd.kde.kplato.png
+#   /usr/share/icons/hicolor/16x16/apps/kchart.png
+#   /usr/share/icons/hicolor/16x16/apps/kplato.png
+#   /usr/share/icons/hicolor/16x16/apps/kpresenter.png
+#   /usr/share/icons/hicolor/16x16/mimetypes/application-x-vnd.kde.kplato.png
+#   /usr/share/icons/hicolor/22x22/apps/kplato.png
+#   /usr/share/icons/hicolor/22x22/apps/kpresenter.png
+#   /usr/share/icons/hicolor/22x22/mimetypes/application-x-vnd.kde.kplato.png
+#   /usr/share/icons/hicolor/32x32/apps/kchart.png
+#   /usr/share/icons/hicolor/32x32/apps/kplato.png
+#   /usr/share/icons/hicolor/32x32/apps/kpresenter.png
+#   /usr/share/icons/hicolor/32x32/mimetypes/application-x-vnd.kde.kplato.png
+#   /usr/share/icons/hicolor/48x48/apps/kchart.png
+#   /usr/share/icons/hicolor/48x48/apps/kplato.png
+#   /usr/share/icons/hicolor/48x48/apps/kpresenter.png
+#   /usr/share/icons/hicolor/48x48/mimetypes/application-x-vnd.kde.kplato.png
+#   /usr/share/icons/hicolor/64x64/apps/kplato.png
+#   /usr/share/icons/hicolor/64x64/mimetypes/application-x-vnd.kde.kplato.png
+#   /usr/share/icons/hicolor/scalable/apps/kplato.svgz
+#   /usr/share/icons/hicolor/scalable/mimetypes/application-x-vnd.kde.kplato.svgz
+#   /usr/share/icons/oxygen/scalable/actions/shape-choose.svgz
+#   /usr/share/icons/oxygen/scalable/actions/table.svgz
+#   /usr/share/kde4/services/Filterkpr2odf.desktop
+#   /usr/share/kde4/services/artistictextshape.desktop
+#   /usr/share/kde4/services/autocorrect.desktop
+#   /usr/share/kde4/services/changecase.desktop
+#   /usr/share/kde4/services/defaulttools.desktop
+#   /usr/share/kde4/services/divineproportionshape.desktop
+#   /usr/share/kde4/services/kopabackgroundtool.desktop
+#   /usr/share/kde4/services/krossmodulekplato.desktop
+#   /usr/share/kde4/services/krossmodulekword.desktop
+#   /usr/share/kde4/services/musicshape.desktop
+#   /usr/share/kde4/services/pathshapes.desktop
+#   /usr/share/kde4/services/pictureshape.desktop
+#   /usr/share/kde4/services/spellcheck.desktop
+#   /usr/share/kde4/services/textshape.desktop
+#   /usr/share/kde4/services/textvariables.desktop
 
 
 %define		_state		unstable

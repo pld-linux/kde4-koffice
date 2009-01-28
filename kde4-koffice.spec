@@ -382,12 +382,6 @@ rm -rf $RPM_BUILD_ROOT
 %post	kpresenter -p /sbin/ldconfig
 %postun	kpresenter -p /sbin/ldconfig
 
-%post	krita -p /sbin/ldconfig
-%postun	krita -p /sbin/ldconfig
-
-%post   kspread -p /sbin/ldconfig
-%postun kspread -p /sbin/ldconfig
-
 %post   kword -p /sbin/ldconfig
 %postun kword -p /sbin/ldconfig
 
@@ -444,6 +438,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/servicetypes/*
 %dir %{_datadir}/templates/.source
 %{_desktopdir}/kde4/koffice.desktop
+%{_iconsdir}/oxygen/*/actions/*.png
 %{_kdedocdir}/en/koffice
 
 %files karbon
@@ -543,38 +538,16 @@ rm -rf $RPM_BUILD_ROOT
 #%{_iconsdir}/*/*/apps/kpresenter*.png
 %{_kdedocdir}/en/kpresenter
 
-#%files krita
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/krita
-#%{_libdir}/libkrita*.la
-#%attr(755,root,root) %{_libdir}/libkrita*.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_cmyk_u16.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_gray_u16.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_lms_f32.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_rgb_f16half.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_rgb_f32.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_rgb_u16.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_ycbcr_u16.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_ycbcr_u8.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkritacolor.so.1
-#%attr(755,root,root) %ghost %{_libdir}/libkritacommon.so.1
-#%attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkritaimage.so.1
-#%attr(755,root,root) %ghost %{_libdir}/libkritargb.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkritascripting.so.0
-#%attr(755,root,root) %ghost %{_libdir}/libkritaui.so.1
-#%attr(755,root,root) %{_libdir}/libkdeinit4_krita.so
-#%{_libdir}/kde4/*krita*.la
-#%attr(755,root,root) %{_libdir}/kde4/*krita*.so
-#%{_datadir}/apps/konqueror/servicemenus/krita_konqi.desktop
-#%{_datadir}/apps/krita
-#%{_datadir}/apps/kritaplugins
-#%{_datadir}/services/krita*.desktop
-#%{_datadir}/templates/Illustration.desktop
-#%{_datadir}/applnk/.hidden/krita_*.desktop
-#%{_desktopdir}/kde/krita.desktop
-#%{_iconsdir}/hicolor/*/apps/krita.png
-#
+%files krita
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/kde4/krita_cmyk_u16_plugin.so
+%attr(755,root,root) %{_libdir}/kde4/kritacmykplugin.so
+%{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
+%{_datadir}/apps/krita
+%{_datadir}/kde4/services/krita*.desktop
+%{_datadir}/templates/Illustration.desktop
+#%{_kdedocdir}/en/krita
+
 #%files kross-python
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_libdir}/kde4/krosspython.so
@@ -585,48 +558,13 @@ rm -rf $RPM_BUILD_ROOT
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_libdir}/kde4/krossruby.so
 #%{_libdir}/kde4/krossruby.la
-#
-#%files kspread
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kspread
-#%{_libdir}/libkdeinit_kspread.la
-#%attr(755,root,root) %{_libdir}/libkdeinit_kspread.so
-#%{_libdir}/kde4/kspread.la
-#%attr(755,root,root) %{_libdir}/kde4/kspread.so
-#%{_libdir}/kde4/krosskspreadcore.la
-#%attr(755,root,root) %{_libdir}/kde4/krosskspreadcore.so
-#%{_libdir}/kde4/kspreadscripting.la
-#%attr(755,root,root) %{_libdir}/kde4/kspreadscripting.so
-#%{_libdir}/kde4/libkspread*.la
-#%attr(755,root,root) %{_libdir}/kde4/libkspread*.so
-#%{_libdir}/kde4/libcsv*.la
-#%attr(755,root,root) %{_libdir}/kde4/libcsv*.so
-#%{_libdir}/kde4/libapplixspreadimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libapplixspreadimport.so
-#%{_libdir}/kde4/libexcelimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libexcelimport.so
-#%{_libdir}/kde4/kfile_gnumeric.la
-#%attr(755,root,root) %{_libdir}/kde4/kfile_gnumeric.so
-#%{_libdir}/kde4/libgnumeric*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libgnumeric*port.so
-#%{_libdir}/kde4/libdbase*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libdbase*port.so
-#%{_libdir}/kde4/libqproimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libqproimport.so
-#%{_libdir}/kde4/libopencalc*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libopencalc*port.so
-#%{_libdir}/kde4/kwmailmerge_kspread.la
-#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_kspread.so
-#%{_datadir}/apps/kspread
-#%{_datadir}/apps/konqueror/servicemenus/kspread_konqi.desktop
-#%{_datadir}/services/kfile_gnumeric.desktop
-#%{_datadir}/services/kspread*.desktop
-#%{_datadir}/services/kwmailmerge_kspread.desktop
-#%{_datadir}/templates/.source/SpreadSheet.kst
-#%{_datadir}/templates/SpreadSheet.desktop
-#%{_desktopdir}/kde/kspread.desktop
-#%{_iconsdir}/[!l]*/*/apps/kspread*.png
-#
+
+%files kspread
+%defattr(644,root,root,755)
+%{_datadir}/kde4/services/ServiceMenus/kspread_konqi.desktop
+%{_datadir}/templates/.source/SpreadSheet.kst
+%{_datadir}/templates/SpreadSheet.desktop
+
 %files kword
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kthesaurus

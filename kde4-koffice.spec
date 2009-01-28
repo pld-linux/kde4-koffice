@@ -24,6 +24,7 @@ License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
 # Source0-md5:	1525ca823dc39934a16cf1de0750ec11
+Patch0:		%{name}-thumbnail.patch
 URL:		http://www.koffice.org/
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
@@ -378,6 +379,7 @@ Zawiera:
 
 %prep
 %setup -q -n %{origname}-%{version}
+%patch0 -p0
 
 %build
 install -d build
@@ -398,39 +400,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir} \
 	kde_libs_htmldir=%{_kdedocdir}
-
-rm -f *.lang
-%find_lang karbon		--with-kde
-%find_lang kchart		--with-kde
-%find_lang kexi			--with-kde
-%find_lang kformula		--with-kde
-%find_lang kivio		--with-kde
-%find_lang koffice		--with-kde
-%find_lang koshell		--with-kde
-cat koshell.lang >> koffice.lang
-%find_lang kplato		--with-kde
-%find_lang kpresenter		--with-kde
-%find_lang krita		--with-kde
-%find_lang kspread		--with-kde
-%find_lang kugar		--with-kde
-%find_lang kword		--with-kde
-%find_lang thesaurus		--with-kde
-cat thesaurus.lang >> kword.lang
-
-# drop koffice-apidocs from lang files, find_lang catches too much
-sed -i -e '/koffice-apidocs/d' *.lang
-
-rm $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES/kexi_add_column_gui_transl_pl.sh
-rm $RPM_BUILD_ROOT%{_datadir}/locale/pl/LC_MESSAGES/kexi_delete_column_gui_transl_pl.sh
-
-# there are only locolor kudesigner icons in this version.
-for a in $RPM_BUILD_ROOT%{_datadir}/icons/locolor/*/apps/kudesigner.png; do
-	l=$(echo $a | sed -e 's,locolor,hicolor,')
-	mv $a $l
-done
-
-# no dir for locolor in pld
-rm -rfv $RPM_BUILD_ROOT%{_datadir}/icons/locolor
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -480,7 +449,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/kexidb
 %{_includedir}/kexiutils
 
-%files common -f koffice.lang
+%files common
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/koconverter
 %attr(755,root,root) %{_bindir}/koshell
@@ -581,7 +550,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/apps/koshell.*
 %{_iconsdir}/crystalsvg/*/actions/gsu*.png
 
-%files karbon -f karbon.lang
+%files karbon
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/karbon
 %{_libdir}/libkarbon*.la
@@ -604,7 +573,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*/*/apps/karbon.png
 %{_iconsdir}/hicolor/scalable/apps/karbon.svgz
 
-%files kchart -f kchart.lang
+%files kchart
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kchart
 %{_libdir}/libkchartcommon.la
@@ -625,7 +594,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde/kchart.desktop
 %{_iconsdir}/*/*x*/apps/kchart.png
 
-%files kexi -f kexi.lang
+%files kexi
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kexi*
 %attr(755,root,root) %{_bindir}/ksqlite
@@ -671,7 +640,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/crystalsvg/*/mimetypes/kexiproject_*.png
 %{_mandir}/man1/*
 
-%files kformula -f kformula.lang
+%files kformula
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kformula
 %{_libdir}/libkdeinit_kformula*.la
@@ -702,7 +671,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*/*/actions/under.png
 %{_iconsdir}/*/*/apps/kformula.png
 
-%files kivio -f kivio.lang
+%files kivio
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kivio
 %{_libdir}/libkiviocommon.la
@@ -721,7 +690,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde/kivio.desktop
 %{_iconsdir}/*/*/apps/kivio.png
 
-%files kplato -f kplato.lang
+%files kplato
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kplato
 %{_libdir}/libkdeinit_kplato.la
@@ -735,7 +704,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde/kplato.desktop
 %{_iconsdir}/crystalsvg/*/apps/kplato.*
 
-%files kpresenter -f kpresenter.lang
+%files kpresenter
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kpresenter
 %attr(755,root,root) %{_bindir}/kprconverter.pl
@@ -766,7 +735,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde/kpresenter.desktop
 %{_iconsdir}/*/*/apps/kpresenter*.png
 
-%files krita -f krita.lang
+%files krita
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/krita
 %{_libdir}/libkrita*.la
@@ -810,7 +779,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/krossruby.so
 %{_libdir}/kde3/krossruby.la
 
-%files kspread -f kspread.lang
+%files kspread
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kspread
 %{_libdir}/libkdeinit_kspread.la
@@ -851,7 +820,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde/kspread.desktop
 %{_iconsdir}/[!l]*/*/apps/kspread*.png
 
-%files kugar -f kugar.lang
+%files kugar
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kudesigner
 %attr(755,root,root) %{_bindir}/kugar
@@ -878,7 +847,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*/*/*/kugar.png
 %{_iconsdir}/*/*/mimetypes/kugardata.png
 
-%files kword -f kword.lang
+%files kword
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kthesaurus
 %attr(755,root,root) %{_bindir}/kword

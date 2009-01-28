@@ -98,7 +98,6 @@ License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
 # Source0-md5:	00a4a0e9e0cfa60bf02a917e2267948c
-Patch0:		%{name}-thumbnail.patch
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -407,7 +406,6 @@ Zawiera:
 
 %prep
 %setup -q -n %{origname}-%{version}
-%patch0 -p0
 
 %build
 install -d build

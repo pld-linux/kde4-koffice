@@ -100,11 +100,13 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origna
 # Source0-md5:	1525ca823dc39934a16cf1de0750ec11
 Patch0:		%{name}-thumbnail.patch
 URL:		http://www.koffice.org/
+BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.6.2
+BuildRequires:	eigen >= 2.0
 BuildRequires:	exiv2-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}

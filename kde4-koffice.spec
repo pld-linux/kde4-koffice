@@ -590,109 +590,42 @@ rm -rf $RPM_BUILD_ROOT
 #%{_desktopdir}/kde/kspread.desktop
 #%{_iconsdir}/[!l]*/*/apps/kspread*.png
 #
-#%files kugar
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kudesigner
-#%attr(755,root,root) %{_bindir}/kugar
-#%{_libdir}/libkdeinit_kudesigner.la
-#%attr(755,root,root) %{_libdir}/libkdeinit_kudesigner.so
-#%{_libdir}/libkugarlib.la
-#%attr(755,root,root) %{_libdir}/libkugarlib.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkugarlib.so.1
-#%{_libdir}/libkdeinit_kugar.la
-#%attr(755,root,root) %{_libdir}/libkdeinit_kugar.so
-#%{_libdir}/libkudesignercore.la
-#%attr(755,root,root) %{_libdir}/libkudesignercore.so
-#%{_libdir}/kde4/*kugar*.la
-#%attr(755,root,root) %{_libdir}/kde4/*kugar*.so
-#%{_libdir}/kde4/*kudesigner*.la
-#%attr(755,root,root) %{_libdir}/kde4/*kudesigner*.so
-#%{_desktopdir}/kde/kudesigner.desktop
-#%{_desktopdir}/kde/kugar.desktop
-#%{_datadir}/apps/kudesigner
-#%{_datadir}/apps/kugar
-#%{_datadir}/services/kugar_kugar_import.desktop
-#%{_datadir}/services/kugarpart.desktop
-#%{_iconsdir}/*/*/*/kudesigner.png
-#%{_iconsdir}/*/*/*/kugar.png
-#%{_iconsdir}/*/*/mimetypes/kugardata.png
-#
-#%files kword
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kthesaurus
-#%attr(755,root,root) %{_bindir}/kword
-#%{_libdir}/libkdeinit_kword.la
-#%attr(755,root,root) %{_libdir}/libkdeinit_kword.so
-#%{_libdir}/libkwordprivate.la
-#%attr(755,root,root) %{_libdir}/libkwordprivate.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkwordprivate.so.4
-#%{_libdir}/libkword*export*.la
-#%attr(755,root,root) %{_libdir}/libkword*export*.so
-#%attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.1
-#%{_libdir}/libkdeinit_kthesaurus.la
-#%attr(755,root,root) %{_libdir}/libkdeinit_kthesaurus.so
-#%{_libdir}/kde4/kthesaurus.la
-#%attr(755,root,root) %{_libdir}/kde4/kthesaurus.so
-#%{_libdir}/kde4/kword.la
-#%attr(755,root,root) %{_libdir}/kde4/kword.so
-#%{_libdir}/kde4/kfile_abiword.la
-#%attr(755,root,root) %{_libdir}/kde4/kfile_abiword.so
-#%{_libdir}/kde4/libabiword*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libabiword*port.so
-#%{_libdir}/kde4/libhancomwordimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libhancomwordimport.so
-#%{_libdir}/kde4/libmswordimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libmswordimport.so
-#%{_libdir}/kde4/libapplixwordimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libapplixwordimport.so
-#%{_libdir}/kde4/libascii*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libascii*port.so
-#%{_libdir}/kde4/libdocbookexport.la
-#%attr(755,root,root) %{_libdir}/kde4/libdocbookexport.so
-#%{_libdir}/kde4/libhtml*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libhtml*port.so
-#%{_libdir}/kde4/libpalmdoc*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libpalmdoc*port.so
-#%{_libdir}/kde4/libamipro*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libamipro*port.so
-#%{_libdir}/kde4/libpdfimport.la
-#%attr(755,root,root) %{_libdir}/kde4/libpdfimport.so
-#%{_libdir}/kde4/libwml*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libwml*port.so
-#%{_libdir}/kde4/librtf*port.la
-#%attr(755,root,root) %{_libdir}/kde4/librtf*port.so
-#%{_libdir}/kde4/libthesaurustool.la
-#%attr(755,root,root) %{_libdir}/kde4/libthesaurustool.so
-#%{_libdir}/kde4/libwp*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libwp*port.so
-#%{_libdir}/kde4/libmswrite*port.la
-#%attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
-#%{_libdir}/kde4/libkword*.la
-#%attr(755,root,root) %{_libdir}/kde4/libkword*.so
-#%{_libdir}/kde4/liboowriter*port.la
-#%attr(755,root,root) %{_libdir}/kde4/liboowriter*port.so
-#%{_libdir}/kde4/kwmailmerge_classic.la
-#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_classic.so
-#%{_libdir}/kde4/kwmailmerge_kabc.la
-#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_kabc.so
-#%{_libdir}/kde4/kwmailmerge_qtsqldb*.la
-#%attr(755,root,root) %{_libdir}/kde4/kwmailmerge_qtsqldb*.so
-#%{_datadir}/apps/kword
-#%{_datadir}/apps/thesaurus
-#%dir %{_datadir}/apps/xsltfilter
-#%dir %{_datadir}/apps/xsltfilter/export
-#%dir %{_datadir}/apps/xsltfilter/export/kword
-#%dir %{_datadir}/apps/xsltfilter/export/kword/xslfo
-#%{_datadir}/apps/xsltfilter/export/kword/xslfo/*.xsl
-#%{_datadir}/apps/konqueror/servicemenus/kword_konqi.desktop
-#%{_datadir}/services/kfile_abiword.desktop
-#%{_datadir}/services/kword*.desktop
-#%{_datadir}/services/thesaurustool.desktop
-#%{_datadir}/services/kwmailmerge_kabc.desktop
-## this is the mailmerge service info for qtsqldb and classic
-#%{_datadir}/services/kwserialletter*
-#%{_datadir}/templates/.source/TextDocument.kwt
-#%{_datadir}/templates/TextDocument.desktop
-#%{_desktopdir}/kde/KThesaurus.desktop
-#%{_desktopdir}/kde/kword.desktop
-#%{_iconsdir}/*/*/apps/kword.png
+%files kword
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/kthesaurus
+%attr(755,root,root) %{_bindir}/kword
+%attr(755,root,root) %{_libdir}/libkdeinit4_kword.so
+%attr(755,root,root) %{_libdir}/libkwordprivate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkwordprivate.so.?
+%attr(755,root,root) %{_libdir}/libkword*export*.so
+%attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.?
+%attr(755,root,root) %{_libdir}/libkdeinit4_kthesaurus.so
+%attr(755,root,root) %{_libdir}/kde4/libabiword*port.so
+%attr(755,root,root) %{_libdir}/kde4/libhancomwordimport.so
+%attr(755,root,root) %{_libdir}/kde4/libapplixwordimport.so
+%attr(755,root,root) %{_libdir}/kde4/libascii*port.so
+%attr(755,root,root) %{_libdir}/kde4/libdocbookexport.so
+%attr(755,root,root) %{_libdir}/kde4/libhtml*port.so
+%attr(755,root,root) %{_libdir}/kde4/libpalmdoc*port.so
+%attr(755,root,root) %{_libdir}/kde4/libamipro*port.so
+%attr(755,root,root) %{_libdir}/kde4/libwm*port.so
+%attr(755,root,root) %{_libdir}/kde4/librtf*port.so
+%attr(755,root,root) %{_libdir}/kde4/thesaurustool.so
+%attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
+%attr(755,root,root) %{_libdir}/kde4/libkword*.so
+%attr(755,root,root) %{_libdir}/kde4/liboowriter*port.so
+%{_datadir}/apps/kword
+%dir %{_datadir}/apps/xsltfilter
+%dir %{_datadir}/apps/xsltfilter/export
+%dir %{_datadir}/apps/xsltfilter/export/kword
+%dir %{_datadir}/apps/xsltfilter/export/kword/xslfo
+%{_datadir}/apps/xsltfilter/export/kword/xslfo/*.xsl
+%{_datadir}/kde4/services/kword*.desktop
+%{_datadir}/kde4/services/thesaurustool.desktop
+# this is the mailmerge service info for qtsqldb and classic
+%{_datadir}/templates/.source/TextDocument.kwt
+%{_datadir}/templates/TextDocument.desktop
+%{_desktopdir}/kde4/KThesaurus.desktop
+%{_desktopdir}/kde4/kword.desktop
+%{_iconsdir}/*/*/apps/kword.png
+%{_kdedocdir}/en/kword

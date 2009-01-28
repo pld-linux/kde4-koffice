@@ -1,0 +1,11 @@
+--- trunk/koffice/tools/thumbnail/CMakeLists.txt        2008/08/28 20:10:54     854090
++++ trunk/koffice/tools/thumbnail/CMakeLists.txt        2009/01/08 18:10:49     907760
+@@ -8,7 +8,7 @@
+
+
+
+-target_link_libraries(clipartthumbnail komain )
++target_link_libraries(clipartthumbnail ${KDE4_KIO_LIBS} komain )
+
+ install(TARGETS clipartthumbnail  DESTINATION ${PLUGIN_INSTALL_DIR})
+

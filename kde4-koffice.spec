@@ -1,3 +1,12 @@
+# TODO
+# -- The following OPTIONAL packages could NOT be located on your system.
+# -- Consider installing them to enable more features from this software.
+# + Eigen2, 2.0 or higher: Eigen2 is needed by KSpread and Krita. They won't be built. <Module in kdesupport>
+# + OpenCTL, 0.9.2 or higher: OpenCTL is needed for some color spaces (High Dynamic Range Color Spaces, YCbCr and LMS) <http://www.openctl.org>
+# + Spnav: Spnav is the library which is required by the space navigator device plugin <http://spacenav.sourceforge.net/>
+# + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
+
+
 %define		_state		unstable
 %define		origname	koffice
 %define		kdever		4.2.0
@@ -10,40 +19,34 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	1.9.98.5
-Release:	1
+Release:	0.1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
 # Source0-md5:	1525ca823dc39934a16cf1de0750ec11
 URL:		http://www.koffice.org/
-BuildRequires:	GraphicsMagick-devel >= 1.1.7
-BuildRequires:	ImageMagick-c++-devel >= 1:6.2.4.0
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
-BuildRequires:	aspell-devel >= 2:0.50.2
+BuildRequires:	automoc4 >= 0.9.88
+BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.6.2
-BuildRequires:	gettext-devel
+BuildRequires:	exiv2-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
+BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	lcms-devel >= 1.15
 BuildRequires:	libexif-devel >= 0.6.12
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
-BuildRequires:	libpqxx-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libwpd-devel
 BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel
 BuildRequires:	pkgconfig
 BuildRequires:	poppler-qt-devel >= 0.5.1
 BuildRequires:	python-devel >= 2.2
-BuildRequires:	readline-devel
-BuildRequires:	rpm-pythonprov
+BuildRequires:	qca-devel >= 2.0.0
+BuildRequires:	qimageblitz-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
-BuildRequires:	ruby-devel
-BuildRequires:	sed >= 4.0
-BuildRequires:	which
-BuildRequires:	wv2-devel >= 0.1.9
 BuildRequires:	zlib-devel
 Requires:	wv2 >= 0.1.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -374,80 +377,27 @@ Zawiera:
 - listę przestrzeni nazw (namespace)
 
 %prep
-%setup -q
-%patch0 -p1
-%patch1 -p1
-#%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;X-Misc;/' \
-	tools/kthesaurus/KThesaurus.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Graphics;/' \
-        karbon/data/karbon.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;X-Misc;/' \
-        kchart/kchart.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;X-Misc;/' \
-        kformula/kformula.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;X-Misc;/' \
-        kivio/kiviopart/kivio.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;Presentation;/' \
-        kpresenter/kpresenter.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;Spreadsheet;/' \
-        kspread/kspread.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;X-Misc;/' \
-        kugar/kudesigner/kudesigner.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;X-Misc;/' \
-        kugar/part/kugar.desktop
-%{__sed} -i 's/Categories=Qt;KDE;Office/Categories=Qt;KDE;Office;WordProcessor;/' \
-        kword/kword.desktop
-
-%{__sed} -i -e '/\[Desktop Entry\]/aEncoding=UTF-8' \
-	karbon/data/karbon.desktop
-%{__sed} -i -e 's/Terminal=0/Terminal=false/' \
-	kugar/kudesigner/kudesigner.desktop \
-	kugar/part/kugar.desktop \
-	kugar/part/kugarpart.desktop
-for f in `find . -name *.desktop`; do
-	if grep -q '\[ven\]' $f; then
-		sed -i -e 's/\[ven\]/[ve]/' $f
-	fi
-done
+%setup -q -n %{origname}-%{version}
 
 %build
-cp -f /usr/share/automake/config.sub admin
-%{__make} -f admin/Makefile.common cvs
-
-%configure \
+install -d build
+cd build
+%cmake \
+        -DCMAKE_INSTALL_PREFIX=%{_prefix} \
 %if "%{_lib}" == "lib64"
-	--enable-libsuffix=64 \
+        -DLIB_SUFFIX=64 \
 %endif
-	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
-	--with-pgsql-includes=%{_includedir} \
-	--with-pgsql-libraries=%{_libdir} \
-	--with-pqxx-includes=%{_includedir}/pqxx \
-	--with-pqxx-libraries=%{_libdir} \
-	--with-qt-libraries=%{_libdir} \
-	--disable-rpath \
-	--disable-final \
-	--enable-pch
+        ../
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir} \
 	kde_libs_htmldir=%{_kdedocdir}
-
-install -d $RPM_BUILD_ROOT{%{_desktopdir}/kde,%{_mandir}/man1}
-
-mv $RPM_BUILD_ROOT{%{_datadir}/applnk/Office/*,%{_desktopdir}/kde}
-
-install kexi/debian/man/k[es]*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 rm -f *.lang
 %find_lang karbon		--with-kde

@@ -499,26 +499,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/karbon.desktop
 #%{_iconsdir}/oxygen/*/apps/karbon.png
 
-#%files kchart
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kchart
-#%{_libdir}/libkchartcommon.la
-#%attr(755,root,root) %{_libdir}/libkchartcommon.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkchartcommon.so.2
-#%{_libdir}/libkchartimageexport.la
-#%attr(755,root,root) %{_libdir}/libkchartimageexport.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkchartimageexport.so.4
-#%attr(755,root,root) %{_libdir}/libkdeinit4_kchart.so
-#%{_libdir}/kde3/kchart.la
-#%attr(755,root,root) %{_libdir}/kde3/kchart.so
-#%{_libdir}/kde3/libkchart*.la
-#%attr(755,root,root) %{_libdir}/kde3/libkchart*.so
-#%{_datadir}/apps/kchart
-#%{_datadir}/apps/konqueror/servicemenus/kchart_konqi.desktop
-#%{_datadir}/services/kchart*.desktop
-#%{_desktopdir}/kde/kchart.desktop
+%files kchart
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libkchartcommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkchartcommon.so.?
+%attr(755,root,root) %{_libdir}/kde4/libkchart*.so
+%{_datadir}/apps/kchart
+%{_datadir}/kde4/services/kchart*.desktop
 #%{_iconsdir}/*/*x*/apps/kchart.png
-#
+
 #%files kexi
 #%defattr(644,root,root,755)
 #%attr(755,root,root) %{_bindir}/kexi*

@@ -1,0 +1,3 @@
+- init
+- almost raw from koffice.spec
+- needs loooots of fixes begining from %build ending on %files

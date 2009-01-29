@@ -32,6 +32,7 @@ BuildRequires:	cmake >= 2.6.2
 BuildRequires:	eigen >= 2.0
 BuildRequires:	exiv2-devel
 BuildRequires:	glew-devel
+BuildRequires:	gmm-devel
 BuildRequires:	gsl-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}

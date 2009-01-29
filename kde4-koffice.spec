@@ -31,6 +31,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.6.2
 BuildRequires:	eigen >= 2.0
 BuildRequires:	exiv2-devel
+BuildRequires:	glew-devel
 BuildRequires:	gsl-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
@@ -534,7 +535,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kformula
 %defattr(644,root,root,755)
-#%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
+%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio

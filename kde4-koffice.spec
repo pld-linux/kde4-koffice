@@ -1,85 +1,9 @@
 # TODO
 # -- The following OPTIONAL packages could NOT be located on your system.
 # -- Consider installing them to enable more features from this software.
-# + Eigen2, 2.0 or higher: Eigen2 is needed by KSpread and Krita. They won't be built. <Module in kdesupport>
 # + OpenCTL, 0.9.2 or higher: OpenCTL is needed for some color spaces (High Dynamic Range Color Spaces, YCbCr and LMS) <http://www.openctl.org>
 # + Spnav: Spnav is the library which is required by the space navigator device plugin <http://spacenav.sourceforge.net/>
 # + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
-#
-# And files:
-#%attr(755,root,root) %{_libdir}/kde4/artistictextshape.so
-#%attr(755,root,root) %{_libdir}/kde4/autocorrect.so
-#%attr(755,root,root) %{_libdir}/kde4/changecase.so
-#%attr(755,root,root) %{_libdir}/kde4/defaulttools.so
-#%attr(755,root,root) %{_libdir}/kde4/divineproportionshape.so
-#%attr(755,root,root) %{_libdir}/kde4/kopabackgroundtool.so
-#%attr(755,root,root) %{_libdir}/kde4/krossmodulekplato.so
-#%attr(755,root,root) %{_libdir}/kde4/krossmodulekword.so
-#%attr(755,root,root) %{_libdir}/kde4/libFilterkpr2odf.so
-#%attr(755,root,root) %{_libdir}/kde4/musicshape.so
-#%attr(755,root,root) %{_libdir}/kde4/pathshapes.so
-#%attr(755,root,root) %{_libdir}/kde4/pictureshape.so
-#%attr(755,root,root) %{_libdir}/kde4/spellcheck.so
-#%attr(755,root,root) %{_libdir}/kde4/textshape.so
-#%attr(755,root,root) %{_libdir}/kde4/textvariables.so
-#%attr(755,root,root) %{_libdir}/libflake.so.5
-#%attr(755,root,root) %{_libdir}/libflake.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libkoguiutils.so.5
-#%attr(755,root,root) %{_libdir}/libkoguiutils.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libkokross.so.5
-#%attr(755,root,root) %{_libdir}/libkokross.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libkomain.so.5
-#%attr(755,root,root) %{_libdir}/libkomain.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libkoodf.so.5
-#%attr(755,root,root) %{_libdir}/libkoodf.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libkoresources.so.5
-#%attr(755,root,root) %{_libdir}/libkoresources.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libkostore.so.5
-#%attr(755,root,root) %{_libdir}/libkostore.so.5.0.0
-#%attr(755,root,root) %{_libdir}/libpigmentcms.so.5
-#%attr(755,root,root) %{_libdir}/libpigmentcms.so.5.0.0
-#%{_datadir}/apps/musicshape/fonts/Emmentaler-14.ttf
-#%{_datadir}/color/icc/pigment/CMY.icm
-#%{_datadir}/color/icc/pigment/cmyk.icm
-#%{_datadir}/icons/hicolor/128x128/apps/kplato.png
-#%{_datadir}/icons/hicolor/128x128/mimetypes/application-x-vnd.kde.kplato.png
-#%{_datadir}/icons/hicolor/16x16/apps/kchart.png
-#%{_datadir}/icons/hicolor/16x16/apps/kplato.png
-#%{_datadir}/icons/hicolor/16x16/apps/kpresenter.png
-#%{_datadir}/icons/hicolor/16x16/mimetypes/application-x-vnd.kde.kplato.png
-#%{_datadir}/icons/hicolor/22x22/apps/kplato.png
-#%{_datadir}/icons/hicolor/22x22/apps/kpresenter.png
-#%{_datadir}/icons/hicolor/22x22/mimetypes/application-x-vnd.kde.kplato.png
-#%{_datadir}/icons/hicolor/32x32/apps/kchart.png
-#%{_datadir}/icons/hicolor/32x32/apps/kplato.png
-#%{_datadir}/icons/hicolor/32x32/apps/kpresenter.png
-#%{_datadir}/icons/hicolor/32x32/mimetypes/application-x-vnd.kde.kplato.png
-#%{_datadir}/icons/hicolor/48x48/apps/kchart.png
-#%{_datadir}/icons/hicolor/48x48/apps/kplato.png
-#%{_datadir}/icons/hicolor/48x48/apps/kpresenter.png
-#%{_datadir}/icons/hicolor/48x48/mimetypes/application-x-vnd.kde.kplato.png
-#%{_datadir}/icons/hicolor/64x64/apps/kplato.png
-#%{_datadir}/icons/hicolor/64x64/mimetypes/application-x-vnd.kde.kplato.png
-#%{_datadir}/icons/hicolor/scalable/apps/kplato.svgz
-#%{_datadir}/icons/hicolor/scalable/mimetypes/application-x-vnd.kde.kplato.svgz
-#%{_datadir}/icons/oxygen/scalable/actions/shape-choose.svgz
-#%{_datadir}/icons/oxygen/scalable/actions/table.svgz
-#%{_datadir}/kde4/services/Filterkpr2odf.desktop
-#%{_datadir}/kde4/services/artistictextshape.desktop
-#%{_datadir}/kde4/services/autocorrect.desktop
-#%{_datadir}/kde4/services/changecase.desktop
-#%{_datadir}/kde4/services/defaulttools.desktop
-#%{_datadir}/kde4/services/divineproportionshape.desktop
-#%{_datadir}/kde4/services/kopabackgroundtool.desktop
-#%{_datadir}/kde4/services/krossmodulekplato.desktop
-#%{_datadir}/kde4/services/krossmodulekword.desktop
-#%{_datadir}/kde4/services/musicshape.desktop
-#%{_datadir}/kde4/services/pathshapes.desktop
-#%{_datadir}/kde4/services/pictureshape.desktop
-#%{_datadir}/kde4/services/spellcheck.desktop
-#%{_datadir}/kde4/services/textshape.desktop
-#%{_datadir}/kde4/services/textvariables.desktop
-
 
 %define		_state		unstable
 %define		origname	koffice
@@ -93,7 +17,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	1.9.98.6
-Release:	0.1
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2

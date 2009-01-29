@@ -109,7 +109,7 @@ Summary:	KOffice - common files and libraries
 Summary(pl.UTF-8):	KOffice - wspólne pliki i biblioteki
 Summary(pt_BR.UTF-8):	Arquivos requeridos por todos os softwares koffice
 Group:		X11/Applications
-Requires:	kdebase-core >= 9:3.2.0
+Requires:	kde4-kdebase-workspace >= %{kdever}
 
 %description common
 KOffice is an integrated office suite for K Desktop Environment.
@@ -601,6 +601,7 @@ rm -rf $RPM_BUILD_ROOT
 %files krita
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/krita
+%attr(755,root,root) %{_libdir}/libkdeinit4_krita.so
 %attr(755,root,root) %ghost %{_libdir}/libKritaRulerAssistantCommon.so.?
 %attr(755,root,root) %{_libdir}/libKritaRulerAssistantCommon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkrita_xyz_u16.so.?
@@ -659,6 +660,7 @@ rm -rf $RPM_BUILD_ROOT
 %files kspread
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kspread
+%attr(755,root,root) %{_libdir}/libkdeinit4_kspread.so
 %attr(755,root,root) %ghost %{_libdir}/libkspreadcommon.so.?
 %attr(755,root,root) %{_libdir}/libkspreadcommon.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/kspread_plugin_tool_calendar.so

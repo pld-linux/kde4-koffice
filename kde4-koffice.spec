@@ -7,78 +7,78 @@
 # + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
 #
 # And files:
-#   /usr/lib64/kde4/artistictextshape.so
-#   /usr/lib64/kde4/autocorrect.so
-#   /usr/lib64/kde4/changecase.so
-#   /usr/lib64/kde4/defaulttools.so
-#   /usr/lib64/kde4/divineproportionshape.so
-#   /usr/lib64/kde4/kopabackgroundtool.so
-#   /usr/lib64/kde4/krossmodulekplato.so
-#   /usr/lib64/kde4/krossmodulekword.so
-#   /usr/lib64/kde4/libFilterkpr2odf.so
-#   /usr/lib64/kde4/musicshape.so
-#   /usr/lib64/kde4/pathshapes.so
-#   /usr/lib64/kde4/pictureshape.so
-#   /usr/lib64/kde4/spellcheck.so
-#   /usr/lib64/kde4/textshape.so
-#   /usr/lib64/kde4/textvariables.so
-#   /usr/lib64/libflake.so.5
-#   /usr/lib64/libflake.so.5.0.0
-#   /usr/lib64/libkoguiutils.so.5
-#   /usr/lib64/libkoguiutils.so.5.0.0
-#   /usr/lib64/libkokross.so.5
-#   /usr/lib64/libkokross.so.5.0.0
-#   /usr/lib64/libkomain.so.5
-#   /usr/lib64/libkomain.so.5.0.0
-#   /usr/lib64/libkoodf.so.5
-#   /usr/lib64/libkoodf.so.5.0.0
-#   /usr/lib64/libkoresources.so.5
-#   /usr/lib64/libkoresources.so.5.0.0
-#   /usr/lib64/libkostore.so.5
-#   /usr/lib64/libkostore.so.5.0.0
-#   /usr/lib64/libpigmentcms.so.5
-#   /usr/lib64/libpigmentcms.so.5.0.0
-#   /usr/share/apps/musicshape/fonts/Emmentaler-14.ttf
-#   /usr/share/color/icc/pigment/CMY.icm
-#   /usr/share/color/icc/pigment/cmyk.icm
-#   /usr/share/icons/hicolor/128x128/apps/kplato.png
-#   /usr/share/icons/hicolor/128x128/mimetypes/application-x-vnd.kde.kplato.png
-#   /usr/share/icons/hicolor/16x16/apps/kchart.png
-#   /usr/share/icons/hicolor/16x16/apps/kplato.png
-#   /usr/share/icons/hicolor/16x16/apps/kpresenter.png
-#   /usr/share/icons/hicolor/16x16/mimetypes/application-x-vnd.kde.kplato.png
-#   /usr/share/icons/hicolor/22x22/apps/kplato.png
-#   /usr/share/icons/hicolor/22x22/apps/kpresenter.png
-#   /usr/share/icons/hicolor/22x22/mimetypes/application-x-vnd.kde.kplato.png
-#   /usr/share/icons/hicolor/32x32/apps/kchart.png
-#   /usr/share/icons/hicolor/32x32/apps/kplato.png
-#   /usr/share/icons/hicolor/32x32/apps/kpresenter.png
-#   /usr/share/icons/hicolor/32x32/mimetypes/application-x-vnd.kde.kplato.png
-#   /usr/share/icons/hicolor/48x48/apps/kchart.png
-#   /usr/share/icons/hicolor/48x48/apps/kplato.png
-#   /usr/share/icons/hicolor/48x48/apps/kpresenter.png
-#   /usr/share/icons/hicolor/48x48/mimetypes/application-x-vnd.kde.kplato.png
-#   /usr/share/icons/hicolor/64x64/apps/kplato.png
-#   /usr/share/icons/hicolor/64x64/mimetypes/application-x-vnd.kde.kplato.png
-#   /usr/share/icons/hicolor/scalable/apps/kplato.svgz
-#   /usr/share/icons/hicolor/scalable/mimetypes/application-x-vnd.kde.kplato.svgz
-#   /usr/share/icons/oxygen/scalable/actions/shape-choose.svgz
-#   /usr/share/icons/oxygen/scalable/actions/table.svgz
-#   /usr/share/kde4/services/Filterkpr2odf.desktop
-#   /usr/share/kde4/services/artistictextshape.desktop
-#   /usr/share/kde4/services/autocorrect.desktop
-#   /usr/share/kde4/services/changecase.desktop
-#   /usr/share/kde4/services/defaulttools.desktop
-#   /usr/share/kde4/services/divineproportionshape.desktop
-#   /usr/share/kde4/services/kopabackgroundtool.desktop
-#   /usr/share/kde4/services/krossmodulekplato.desktop
-#   /usr/share/kde4/services/krossmodulekword.desktop
-#   /usr/share/kde4/services/musicshape.desktop
-#   /usr/share/kde4/services/pathshapes.desktop
-#   /usr/share/kde4/services/pictureshape.desktop
-#   /usr/share/kde4/services/spellcheck.desktop
-#   /usr/share/kde4/services/textshape.desktop
-#   /usr/share/kde4/services/textvariables.desktop
+#%attr(755,root,root) %{_libdir}/kde4/artistictextshape.so
+#%attr(755,root,root) %{_libdir}/kde4/autocorrect.so
+#%attr(755,root,root) %{_libdir}/kde4/changecase.so
+#%attr(755,root,root) %{_libdir}/kde4/defaulttools.so
+#%attr(755,root,root) %{_libdir}/kde4/divineproportionshape.so
+#%attr(755,root,root) %{_libdir}/kde4/kopabackgroundtool.so
+#%attr(755,root,root) %{_libdir}/kde4/krossmodulekplato.so
+#%attr(755,root,root) %{_libdir}/kde4/krossmodulekword.so
+#%attr(755,root,root) %{_libdir}/kde4/libFilterkpr2odf.so
+#%attr(755,root,root) %{_libdir}/kde4/musicshape.so
+#%attr(755,root,root) %{_libdir}/kde4/pathshapes.so
+#%attr(755,root,root) %{_libdir}/kde4/pictureshape.so
+#%attr(755,root,root) %{_libdir}/kde4/spellcheck.so
+#%attr(755,root,root) %{_libdir}/kde4/textshape.so
+#%attr(755,root,root) %{_libdir}/kde4/textvariables.so
+#%attr(755,root,root) %{_libdir}/libflake.so.5
+#%attr(755,root,root) %{_libdir}/libflake.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libkoguiutils.so.5
+#%attr(755,root,root) %{_libdir}/libkoguiutils.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libkokross.so.5
+#%attr(755,root,root) %{_libdir}/libkokross.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libkomain.so.5
+#%attr(755,root,root) %{_libdir}/libkomain.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libkoodf.so.5
+#%attr(755,root,root) %{_libdir}/libkoodf.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libkoresources.so.5
+#%attr(755,root,root) %{_libdir}/libkoresources.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libkostore.so.5
+#%attr(755,root,root) %{_libdir}/libkostore.so.5.0.0
+#%attr(755,root,root) %{_libdir}/libpigmentcms.so.5
+#%attr(755,root,root) %{_libdir}/libpigmentcms.so.5.0.0
+#%{_datadir}/apps/musicshape/fonts/Emmentaler-14.ttf
+#%{_datadir}/color/icc/pigment/CMY.icm
+#%{_datadir}/color/icc/pigment/cmyk.icm
+#%{_datadir}/icons/hicolor/128x128/apps/kplato.png
+#%{_datadir}/icons/hicolor/128x128/mimetypes/application-x-vnd.kde.kplato.png
+#%{_datadir}/icons/hicolor/16x16/apps/kchart.png
+#%{_datadir}/icons/hicolor/16x16/apps/kplato.png
+#%{_datadir}/icons/hicolor/16x16/apps/kpresenter.png
+#%{_datadir}/icons/hicolor/16x16/mimetypes/application-x-vnd.kde.kplato.png
+#%{_datadir}/icons/hicolor/22x22/apps/kplato.png
+#%{_datadir}/icons/hicolor/22x22/apps/kpresenter.png
+#%{_datadir}/icons/hicolor/22x22/mimetypes/application-x-vnd.kde.kplato.png
+#%{_datadir}/icons/hicolor/32x32/apps/kchart.png
+#%{_datadir}/icons/hicolor/32x32/apps/kplato.png
+#%{_datadir}/icons/hicolor/32x32/apps/kpresenter.png
+#%{_datadir}/icons/hicolor/32x32/mimetypes/application-x-vnd.kde.kplato.png
+#%{_datadir}/icons/hicolor/48x48/apps/kchart.png
+#%{_datadir}/icons/hicolor/48x48/apps/kplato.png
+#%{_datadir}/icons/hicolor/48x48/apps/kpresenter.png
+#%{_datadir}/icons/hicolor/48x48/mimetypes/application-x-vnd.kde.kplato.png
+#%{_datadir}/icons/hicolor/64x64/apps/kplato.png
+#%{_datadir}/icons/hicolor/64x64/mimetypes/application-x-vnd.kde.kplato.png
+#%{_datadir}/icons/hicolor/scalable/apps/kplato.svgz
+#%{_datadir}/icons/hicolor/scalable/mimetypes/application-x-vnd.kde.kplato.svgz
+#%{_datadir}/icons/oxygen/scalable/actions/shape-choose.svgz
+#%{_datadir}/icons/oxygen/scalable/actions/table.svgz
+#%{_datadir}/kde4/services/Filterkpr2odf.desktop
+#%{_datadir}/kde4/services/artistictextshape.desktop
+#%{_datadir}/kde4/services/autocorrect.desktop
+#%{_datadir}/kde4/services/changecase.desktop
+#%{_datadir}/kde4/services/defaulttools.desktop
+#%{_datadir}/kde4/services/divineproportionshape.desktop
+#%{_datadir}/kde4/services/kopabackgroundtool.desktop
+#%{_datadir}/kde4/services/krossmodulekplato.desktop
+#%{_datadir}/kde4/services/krossmodulekword.desktop
+#%{_datadir}/kde4/services/musicshape.desktop
+#%{_datadir}/kde4/services/pathshapes.desktop
+#%{_datadir}/kde4/services/pictureshape.desktop
+#%{_datadir}/kde4/services/spellcheck.desktop
+#%{_datadir}/kde4/services/textshape.desktop
+#%{_datadir}/kde4/services/textvariables.desktop
 
 
 %define		_state		unstable
@@ -430,23 +430,29 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	common -p /sbin/ldconfig
-%postun common -p /sbin/ldconfig
+%post	common	-p /sbin/ldconfig
+%postun	common	-p /sbin/ldconfig
 
-%post   karbon -p /sbin/ldconfig
-%postun karbon -p /sbin/ldconfig
+%post	karbon	-p /sbin/ldconfig
+%postun	karbon	-p /sbin/ldconfig
 
-%post   kchart -p /sbin/ldconfig
-%postun kchart -p /sbin/ldconfig
+%post	kchart	-p /sbin/ldconfig
+%postun	kchart	-p /sbin/ldconfig
 
-%post	kplato -p /sbin/ldconfig
-%postun	kplato -p /sbin/ldconfig
+%post	kplato	-p /sbin/ldconfig
+%postun	kplato	-p /sbin/ldconfig
 
-%post	kpresenter -p /sbin/ldconfig
-%postun	kpresenter -p /sbin/ldconfig
+%post	kpresenter	-p /sbin/ldconfig
+%postun	kpresenter	-p /sbin/ldconfig
 
-%post   kword -p /sbin/ldconfig
-%postun kword -p /sbin/ldconfig
+%post	krita	-p /sbin/ldconfig
+%postun	krita	-p /sbin/ldconfig
+
+%post	kspread	-p /sbin/ldconfig
+%postun	kspread	-p /sbin/ldconfig
+
+%post	kword	-p /sbin/ldconfig
+%postun	kword	-p /sbin/ldconfig
 
 %files devel
 %defattr(644,root,root,755)
@@ -503,6 +509,72 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/koffice.desktop
 %{_iconsdir}/oxygen/*/actions/*.png
 %{_kdedocdir}/en/koffice
+%dir %{_datadir}/color
+%dir %{_datadir}/color/icc
+#
+# Files i dunno what to do with
+#
+%attr(755,root,root) %{_libdir}/kde4/artistictextshape.so
+%attr(755,root,root) %{_libdir}/kde4/autocorrect.so
+%attr(755,root,root) %{_libdir}/kde4/changecase.so
+%attr(755,root,root) %{_libdir}/kde4/defaulttools.so
+%attr(755,root,root) %{_libdir}/kde4/divineproportionshape.so
+%attr(755,root,root) %{_libdir}/kde4/kopabackgroundtool.so
+%attr(755,root,root) %{_libdir}/kde4/krossmodulekplato.so
+%attr(755,root,root) %{_libdir}/kde4/krossmodulekspread.so
+%attr(755,root,root) %{_libdir}/kde4/krossmodulekword.so
+%attr(755,root,root) %{_libdir}/kde4/libFilterkpr2odf.so
+%attr(755,root,root) %{_libdir}/kde4/libapplixspreadimport.so
+%attr(755,root,root) %{_libdir}/kde4/libcsvexport.so
+%attr(755,root,root) %{_libdir}/kde4/libcsvimport.so
+%attr(755,root,root) %{_libdir}/kde4/libdbaseimport.so
+%attr(755,root,root) %{_libdir}/kde4/libexcelimport.so
+%attr(755,root,root) %{_libdir}/kde4/libgnumericexport.so
+%attr(755,root,root) %{_libdir}/kde4/libgnumericimport.so
+%attr(755,root,root) %{_libdir}/kde4/libopencalcexport.so
+%attr(755,root,root) %{_libdir}/kde4/libopencalcimport.so
+%attr(755,root,root) %{_libdir}/kde4/libqproimport.so
+%attr(755,root,root) %{_libdir}/kde4/musicshape.so
+%attr(755,root,root) %{_libdir}/kde4/pathshapes.so
+%attr(755,root,root) %{_libdir}/kde4/pictureshape.so
+%attr(755,root,root) %{_libdir}/kde4/spellcheck.so
+%attr(755,root,root) %{_libdir}/kde4/spreadsheetshape.so
+%attr(755,root,root) %{_libdir}/kde4/textshape.so
+%attr(755,root,root) %{_libdir}/kde4/textvariables.so
+%attr(755,root,root) %ghost %{_libdir}/libflake.so.?
+%attr(755,root,root) %{_libdir}/libflake.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkoguiutils.so.?
+%attr(755,root,root) %{_libdir}/libkoguiutils.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkokross.so.?
+%attr(755,root,root) %{_libdir}/libkokross.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkomain.so.?
+%attr(755,root,root) %{_libdir}/libkomain.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkoodf.so.?
+%attr(755,root,root) %{_libdir}/libkoodf.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkoresources.so.?
+%attr(755,root,root) %{_libdir}/libkoresources.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkostore.so.?
+%attr(755,root,root) %{_libdir}/libkostore.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkrossmodulekrita.so.?
+%attr(755,root,root) %{_libdir}/libkrossmodulekrita.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libpigmentcms.so.?
+%attr(755,root,root) %{_libdir}/libpigmentcms.so.*.*.*
+%{_datadir}/kde4/services/Filterkpr2odf.desktop
+%{_datadir}/kde4/services/artistictextshape.desktop
+%{_datadir}/kde4/services/autocorrect.desktop
+%{_datadir}/kde4/services/changecase.desktop
+%{_datadir}/kde4/services/defaulttools.desktop
+%{_datadir}/kde4/services/divineproportionshape.desktop
+%{_datadir}/kde4/services/kopabackgroundtool.desktop
+%{_datadir}/kde4/services/krossmodulekplato.desktop
+%{_datadir}/kde4/services/krossmodulekspread.desktop
+%{_datadir}/kde4/services/krossmodulekword.desktop
+%{_datadir}/kde4/services/musicshape.desktop
+%{_datadir}/kde4/services/pathshapes.desktop
+%{_datadir}/kde4/services/pictureshape.desktop
+%{_datadir}/kde4/services/spellcheck.desktop
+%{_datadir}/kde4/services/textshape.desktop
+%{_datadir}/kde4/services/textvariables.desktop
 
 %files karbon
 %defattr(644,root,root,755)
@@ -535,12 +607,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kchart*.desktop
 %{_datadir}/kde4/services/chartshape.desktop
 %{_datadir}/kde4/services/ServiceMenus/kchart_konqi.desktop
-#%{_iconsdir}/*/*x*/apps/kchart.png
+%{_iconsdir}/hicolor/*/apps/kchart.png
 %{_kdedocdir}/en/kchart
 
 %files kformula
 %defattr(644,root,root,755)
-%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
+#%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio
@@ -566,7 +638,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kplatopart.desktop
 %{_desktopdir}/kde4/kplato.desktop
 %{_datadir}/config/kplatorc
-#%{_iconsdir}/oxygen/*/apps/kplato.*
+%{_iconsdir}/hicolor/*/apps/kplato.png
+%{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.png
 %{_kdedocdir}/en/kplato
 
 %files kpresenter
@@ -577,7 +650,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
 %attr(755,root,root) %{_libdir}/kde4/kpresenter*.so
 %attr(755,root,root) %{_libdir}/kde4/libkpresenter*.so
-%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
+#%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_barwipe.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_clockwipe.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_edgewipe.so
@@ -598,18 +671,55 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kpr_pageeffect_slidewipe.desktop
 %{_datadir}/kde4/services/kpr_shapeanimation_example.desktop
 %{_desktopdir}/kde4/kpresenter.desktop
-#%{_iconsdir}/*/*/apps/kpresenter*.png
+%{_iconsdir}/hicolor/*/apps/kpresenter.png
 %{_kdedocdir}/en/kpresenter
 
 %files krita
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/kde4/krita_cmyk_u16_plugin.so
-%attr(755,root,root) %{_libdir}/kde4/kritacmykplugin.so
+%attr(755,root,root) %{_bindir}/krita
+%attr(755,root,root) %ghost %{_libdir}/libKritaRulerAssistantCommon.so.?
+%attr(755,root,root) %{_libdir}/libKritaRulerAssistantCommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkrita_xyz_u16.so.?
+%attr(755,root,root) %{_libdir}/libkrita_xyz_u16.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.?
+%attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritaimage.so.?
+%attr(755,root,root) %{_libdir}/libkritaimage.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritalibpaintop.so.?
+%attr(755,root,root) %{_libdir}/libkritalibpaintop.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritaui.so.?
+%attr(755,root,root) %{_libdir}/libkritaui.so.*.*.*
+%attr(755,root,root) %{_libdir}/kde4/krita*.so
+%attr(755,root,root) %{_libdir}/kde4/libkritabmpexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritagmagickexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritagmagickimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritajpegexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritajpegimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritaoraexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritaoraimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritapart.so
+%attr(755,root,root) %{_libdir}/kde4/libkritapdfimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritapngexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritapngimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritatiffexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritatiffimport.so
 %{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
 %{_datadir}/apps/krita
+%{_datadir}/apps/kritaplugins
+%{_datadir}/applications/kde4/krita.desktop
+%{_datadir}/applications/kde4/krita_bmp.desktop
+%{_datadir}/applications/kde4/krita_jpeg.desktop
+%{_datadir}/applications/kde4/krita_magick.desktop
+%{_datadir}/applications/kde4/krita_ora.desktop
+%{_datadir}/applications/kde4/krita_pdf.desktop
+%{_datadir}/applications/kde4/krita_png.desktop
+%{_datadir}/applications/kde4/krita_tiff.desktop
+%{_datadir}/color/icc/krita
 %{_datadir}/kde4/services/krita*.desktop
 %{_datadir}/templates/Illustration.desktop
-#%{_kdedocdir}/en/krita
+%{_datadir}/mime/packages/krita_ora.xml
+%{_iconsdir}/hicolor/*/apps/krita.png
+%{_kdedocdir}/en/krita
 
 #%files kross-python
 #%defattr(644,root,root,755)
@@ -624,9 +734,37 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kspread
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/kspread
+%attr(755,root,root) %ghost %{_libdir}/libkspreadcommon.so.?
+%attr(755,root,root) %{_libdir}/libkspreadcommon.so.*.*.*
+%attr(755,root,root) %{_libdir}/kde4/kspread_plugin_tool_calendar.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadbitopsmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadconversionmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreaddatabasemodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreaddatetimemodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadengineeringmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadfinancialmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadinformationmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadlogicmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadmathmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadreferencemodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadstatisticalmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadtextmodule.so
+%attr(755,root,root) %{_libdir}/kde4/kspreadtrigonometrymodule.so
+%attr(755,root,root) %{_libdir}/kde4/libkspreadhtmlexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkspreadlatexexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkspreadpart.so
+%attr(755,root,root) %{_libdir}/kde4/spreadsheetshape.so
+%{_datadir}/apps/kspread
+%{_datadir}/applications/kde4/kspread.desktop
 %{_datadir}/kde4/services/ServiceMenus/kspread_konqi.desktop
 %{_datadir}/templates/.source/SpreadSheet.kst
 %{_datadir}/templates/SpreadSheet.desktop
+%{_datadir}/kde4/services/kspread*.desktop
+%{_datadir}/kde4/services/spreadsheetshape.desktop
+%{_datadir}/config.kcfg/kspread.kcfg
+%{_iconsdir}/hicolor/*/apps/kspread.png
+%{_kdedocdir}/en/kspread
 
 %files kword
 %defattr(644,root,root,755)
@@ -666,6 +804,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/TextDocument.desktop
 %{_desktopdir}/kde4/KThesaurus.desktop
 %{_desktopdir}/kde4/kword.desktop
-%{_iconsdir}/*/*/apps/kword.png
+%{_iconsdir}/hicolor/*/apps/kword.png
 %{_kdedocdir}/en/kword
 %{_kdedocdir}/en/thesaurus

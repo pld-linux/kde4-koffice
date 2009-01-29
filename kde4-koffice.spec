@@ -17,7 +17,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	1.9.98.6
-Release:	1
+Release:	2
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
@@ -535,7 +535,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kformula
 %defattr(644,root,root,755)
-%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
+#%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio

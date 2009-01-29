@@ -31,6 +31,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.6.2
 BuildRequires:	eigen >= 2.0
 BuildRequires:	exiv2-devel
+BuildRequires:	gsl-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	lcms-devel >= 1.15
@@ -426,6 +427,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/krossmodulekplato.so
 %attr(755,root,root) %{_libdir}/kde4/krossmodulekspread.so
 %attr(755,root,root) %{_libdir}/kde4/krossmodulekword.so
+%attr(755,root,root) %{_libdir}/kde4/libkspreadsolver.so
 %attr(755,root,root) %{_libdir}/kde4/libFilterkpr2odf.so
 %attr(755,root,root) %{_libdir}/kde4/libapplixspreadimport.so
 %attr(755,root,root) %{_libdir}/kde4/libcsvexport.so

@@ -175,7 +175,7 @@ Gerador de diagramas do KOffice.
 Summary:        KOffice - kformula
 Summary(pl.UTF-8):      KOffice - kformula
 Group:          X11/Applications
-Requires:       %{name}-common = %{version}-%{release}
+Requires:	%{name}-common = %{version}-%{release}
 
 %description kformula
 KFormula is KOffice part for creating formulas, equations, etc...
@@ -255,7 +255,6 @@ oraz LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
 %package kross-python
 Summary:	KOffice - Kross Python
 Group:		X11/Applications
-Requires:	%{name}-common = %{version}-%{release}
 
 %description kross-python
 Kross is a scripting bridge to embed scripting functionality into an
@@ -266,7 +265,6 @@ Python scripting backend.
 %package kross-ruby
 Summary:	KOffice - Kross Ruby
 Group:		X11/Applications
-Requires:	%{name}-common = %{version}-%{release}
 
 %description kross-ruby
 Kross is a scripting bridge to embed scripting functionality into an
@@ -308,25 +306,6 @@ również do zwykłej edycji tekstu (jak pisanie listów, raportów, itp.).
 
 %description kword -l pt_BR.UTF-8
 Processador de texto do KOffice.
-
-%package apidocs
-Summary:	Koffice API documentation
-Summary(pl.UTF-8):	Dokumentacja API dla Koffice
-Group:		Documentation
-Requires:	%{name}-devel = %{version}-%{release}
-
-%description apidocs
-Annotated reference of KOffice libraries programming interface
-including:
-- class lists
-- class members
-- namespaces
-
-%description apidocs -l pl.UTF-8
-Dokumentacja interfejsu programowania bibliotek KOffice z przypisami.
-Zawiera:
-- listy klas i ich składników
-- listę przestrzeni nazw (namespace)
 
 %prep
 %setup -q -n %{origname}-%{version}
@@ -465,22 +444,20 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/spreadsheetshape.so
 %attr(755,root,root) %{_libdir}/kde4/textshape.so
 %attr(755,root,root) %{_libdir}/kde4/textvariables.so
-%attr(755,root,root) %ghost %{_libdir}/libflake.so.?
-%attr(755,root,root) %{_libdir}/libflake.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkoguiutils.so.?
-%attr(755,root,root) %{_libdir}/libkoguiutils.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkokross.so.?
 %attr(755,root,root) %{_libdir}/libkokross.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkomain.so.?
-%attr(755,root,root) %{_libdir}/libkomain.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkoodf.so.?
 %attr(755,root,root) %{_libdir}/libkoodf.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkoresources.so.?
-%attr(755,root,root) %{_libdir}/libkoresources.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkostore.so.?
 %attr(755,root,root) %{_libdir}/libkostore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkrossmodulekrita.so.?
 %attr(755,root,root) %{_libdir}/libkrossmodulekrita.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkomain.so.?
+%attr(755,root,root) %{_libdir}/libkomain.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libflake.so.?
+%attr(755,root,root) %{_libdir}/libflake.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkoresources.so.?
+%attr(755,root,root) %{_libdir}/libkoresources.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libpigmentcms.so.?
 %attr(755,root,root) %{_libdir}/libpigmentcms.so.*.*.*
 %{_datadir}/kde4/services/Filterkpr2odf.desktop
@@ -499,12 +476,31 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/spellcheck.desktop
 %{_datadir}/kde4/services/textshape.desktop
 %{_datadir}/kde4/services/textvariables.desktop
+# these libs actually need to be here, to prevent LOOPS
+%attr(755,root,root) %{_libdir}/libkarboncommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkarboncommon.so.?
+%attr(755,root,root) %ghost %{_libdir}/libkritaimage.so.?
+%attr(755,root,root) %{_libdir}/libkritaimage.so.*.*.*
+%attr(755,root,root) %{_libdir}/libkwordprivate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkwordprivate.so.?
+%attr(755,root,root) %ghost %{_libdir}/libkoguiutils.so.?
+%attr(755,root,root) %{_libdir}/libkoguiutils.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritaui.so.?
+%attr(755,root,root) %{_libdir}/libkritaui.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkspreadcommon.so.?
+%attr(755,root,root) %{_libdir}/libkspreadcommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatokernel.so.?
+%attr(755,root,root) %{_libdir}/libkplatokernel.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatomodels.so.?
+%attr(755,root,root) %{_libdir}/libkplatomodels.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatoprivate.so.?
+%attr(755,root,root) %{_libdir}/libkplatoprivate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkplatoui.so.?
+%attr(755,root,root) %{_libdir}/libkplatoui.so.*.*.*
 
 %files karbon
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/karbon
-%attr(755,root,root) %{_libdir}/libkarboncommon.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkarboncommon.so.?
 %attr(755,root,root) %{_libdir}/libkarbonui.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkarbonui.so.?
 %attr(755,root,root) %{_libdir}/libkdeinit4_karbon.so
@@ -549,14 +545,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kplato
 %attr(755,root,root) %{_libdir}/libkdeinit4_kplato.so
-%attr(755,root,root) %ghost %{_libdir}/libkplatokernel.so.?
-%attr(755,root,root) %{_libdir}/libkplatokernel.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkplatomodels.so.?
-%attr(755,root,root) %{_libdir}/libkplatomodels.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkplatoprivate.so.?
-%attr(755,root,root) %{_libdir}/libkplatoprivate.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkplatoui.so.?
-%attr(755,root,root) %{_libdir}/libkplatoui.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/libkplatopart.so
 %{_datadir}/apps/kplato
 %{_datadir}/kde4/services/kplatopart.desktop
@@ -608,12 +596,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkrita_xyz_u16.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.?
 %attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkritaimage.so.?
-%attr(755,root,root) %{_libdir}/libkritaimage.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibpaintop.so.?
 %attr(755,root,root) %{_libdir}/libkritalibpaintop.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkritaui.so.?
-%attr(755,root,root) %{_libdir}/libkritaui.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/krita*.so
 %attr(755,root,root) %{_libdir}/kde4/libkritabmpexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritagmagickexport.so
@@ -661,8 +645,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kspread
 %attr(755,root,root) %{_libdir}/libkdeinit4_kspread.so
-%attr(755,root,root) %ghost %{_libdir}/libkspreadcommon.so.?
-%attr(755,root,root) %{_libdir}/libkspreadcommon.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/kspread_plugin_tool_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadbitopsmodule.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadconversionmodule.so
@@ -697,8 +679,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kthesaurus
 %attr(755,root,root) %{_bindir}/kword
 %attr(755,root,root) %{_libdir}/libkdeinit4_kword.so
-%attr(755,root,root) %{_libdir}/libkwordprivate.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkwordprivate.so.?
 %attr(755,root,root) %{_libdir}/libkword*export*.so
 %attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.?
 %attr(755,root,root) %{_libdir}/libkdeinit4_kthesaurus.so

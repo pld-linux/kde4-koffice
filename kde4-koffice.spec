@@ -183,6 +183,9 @@ Requires:	%{name}-common = %{version}-%{release}
 %description kformula
 KFormula is KOffice part for creating formulas, equations, etc...
 
+%description kformula -l pl.UTF-8
+KFormula jest aplikacją służącą do tworzenia wzorów, równań itp.
+
 %package kivio
 Summary:	KOffice - kivio
 Summary(pl.UTF-8):	KOffice - kivio
@@ -254,26 +257,6 @@ LMS, in 8 and 16 bits per channel
 Krita jest aplikacją do edycji grafiki bitmapowej. Wspiera różne
 przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR
 oraz LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
-
-%package kross-python
-Summary:	KOffice - Kross Python
-Group:		X11/Applications
-
-%description kross-python
-Kross is a scripting bridge to embed scripting functionality into an
-application. Kross provides an abstract API to access the scripting
-functionality in a interpreter-independend way. This package provides
-Python scripting backend.
-
-%package kross-ruby
-Summary:	KOffice - Kross Ruby
-Group:		X11/Applications
-
-%description kross-ruby
-Kross is a scripting bridge to embed scripting functionality into an
-application. Kross provides an abstract API to access the scripting
-functionality in a interpreter-independend way. This package provides
-Ruby scripting backend.
 
 %package kspread
 Summary:	KOffice - KSpread
@@ -633,17 +616,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/mime/packages/krita_ora.xml
 %{_iconsdir}/hicolor/*/apps/krita.png
 %{_kdedocdir}/en/krita
-
-#%files kross-python
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_libdir}/kde4/krosspython.so
-#%{_libdir}/kde4/krosspython.la
-#%{_datadir}/apps/kross/python
-#
-#%files kross-ruby
-#%defattr(644,root,root,755)
-#%attr(755,root,root) %{_libdir}/kde4/krossruby.so
-#%{_libdir}/kde4/krossruby.la
 
 %files kspread
 %defattr(644,root,root,755)

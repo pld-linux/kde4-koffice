@@ -7,7 +7,7 @@
 
 %define		_state		unstable
 %define		origname	koffice
-%define		kdever		4.2.0
+%define		kdever		4.2.1
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
@@ -16,12 +16,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	1.9.98.6
-Release:	4
+Version:	1.9.98.7
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	00a4a0e9e0cfa60bf02a917e2267948c
+# Source0-md5:	1b44eb284f35d148ea6aacb0f2408277
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -493,7 +493,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkarbonui.so.?
 %attr(755,root,root) %{_libdir}/libkdeinit4_karbon.so
 %attr(755,root,root) %{_libdir}/kde4/*karbon*.so
-%attr(755,root,root) %{_libdir}/kde4/*wmf*port.so
+#%attr(755,root,root) %{_libdir}/kde4/*wmf*port.so
 %{_datadir}/apps/karbon
 %{_datadir}/kde4/services/karbon*
 %{_datadir}/templates/.source/Illustration.karbon
@@ -501,7 +501,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/karbon.desktop
 %{_datadir}/kde4/services/ServiceMenus/karbon_konqi.desktop
 #%{_iconsdir}/oxygen/*/apps/karbon.png
-%{_kdedocdir}/en/karbon
+#%{_kdedocdir}/en/karbon
 
 %files kchart
 %defattr(644,root,root,755)
@@ -586,6 +586,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibpaintop.so.?
 %attr(755,root,root) %{_libdir}/libkritalibpaintop.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamiccoloringprogram.so.?
+%attr(755,root,root) %{_libdir}/libkritabasicdynamiccoloringprogram.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamicshapeprogram.so.?
+%attr(755,root,root) %{_libdir}/libkritabasicdynamicshapeprogram.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritadynamicbrush.so.?
+%attr(755,root,root) %{_libdir}/libkritadynamicbrush.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/krita*.so
 %attr(755,root,root) %{_libdir}/kde4/libkritabmpexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritagmagickexport.so
@@ -600,6 +606,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libkritapngimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritatiffexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritatiffimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkrita_raw_import.so
+%{_datadir}/applications/kde4/krita_raw.desktop
 %{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
 %{_datadir}/apps/krita
 %{_datadir}/apps/kritaplugins

@@ -7,7 +7,7 @@
 
 %define		_state		unstable
 %define		origname	koffice
-%define		kdever		4.2.1
+%define		kdever		4.2.2
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
@@ -16,12 +16,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	1.9.98.7
+Version:	1.9.99.0
 Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	1b44eb284f35d148ea6aacb0f2408277
+# Source0-md5:	46dcbdda79c6a9aa645d1d473c8d2046
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -36,7 +36,7 @@ BuildRequires:	gmm-devel
 BuildRequires:	gsl-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
-BuildRequires:	lcms-devel >= 1.15
+BuildRequires:	lcms-devel >= 1.18
 BuildRequires:	libexif-devel >= 0.6.12
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
@@ -438,8 +438,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkoodf.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkostore.so.?
 %attr(755,root,root) %{_libdir}/libkostore.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkrossmodulekrita.so.?
-%attr(755,root,root) %{_libdir}/libkrossmodulekrita.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkomain.so.?
 %attr(755,root,root) %{_libdir}/libkomain.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libflake.so.?
@@ -495,13 +493,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/*karbon*.so
 #%attr(755,root,root) %{_libdir}/kde4/*wmf*port.so
 %{_datadir}/apps/karbon
+%{_datadir}/config/karbonrc
 %{_datadir}/kde4/services/karbon*
 %{_datadir}/templates/.source/Illustration.karbon
 %{_datadir}/templates/Illustration.desktop
 %{_desktopdir}/kde4/karbon.desktop
 %{_datadir}/kde4/services/ServiceMenus/karbon_konqi.desktop
 #%{_iconsdir}/oxygen/*/apps/karbon.png
-#%{_kdedocdir}/en/karbon
+%{_kdedocdir}/en/karbon
 
 %files kchart
 %defattr(644,root,root,755)
@@ -580,6 +579,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkdeinit4_krita.so
 %attr(755,root,root) %ghost %{_libdir}/libKritaRulerAssistantCommon.so.?
 %attr(755,root,root) %{_libdir}/libKritaRulerAssistantCommon.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkritalibbrush.so.?
+%attr(755,root,root) %{_libdir}/libkritalibbrush.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkrita_xyz_u16.so.?
 %attr(755,root,root) %{_libdir}/libkrita_xyz_u16.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.?
@@ -619,6 +620,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/kde4/krita_pdf.desktop
 %{_datadir}/applications/kde4/krita_png.desktop
 %{_datadir}/applications/kde4/krita_tiff.desktop
+%{_datadir}/config/kritarc
 %{_datadir}/color/icc/krita
 %{_datadir}/kde4/services/krita*.desktop
 %{_datadir}/templates/Illustration.desktop
@@ -687,6 +689,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/apps/xsltfilter/export/kword
 %dir %{_datadir}/apps/xsltfilter/export/kword/xslfo
 %{_datadir}/apps/xsltfilter/export/kword/xslfo/*.xsl
+%{_datadir}/config/kwordrc
 %{_datadir}/kde4/services/ServiceMenus/kword_konqi.desktop
 %{_datadir}/kde4/services/kword*.desktop
 %{_datadir}/kde4/services/thesaurustool.desktop

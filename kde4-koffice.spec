@@ -5,7 +5,7 @@
 # + Spnav: Spnav is the library which is required by the space navigator device plugin <http://spacenav.sourceforge.net/>
 # + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
 
-%define		_state		unstable
+%define		_state		stable
 %define		origname	koffice
 %define		kdever		4.2.2
 
@@ -16,12 +16,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	1.9.99.0
+Version:	2.0.0
 Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	46dcbdda79c6a9aa645d1d473c8d2046
+# Source0-md5:	46531c940d4672f5206cd60bb484f1c6
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -520,13 +520,13 @@ rm -rf $RPM_BUILD_ROOT
 %files kformula
 %defattr(644,root,root,755)
 #%{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
-%{_kdedocdir}/en/kformula
+#%{_kdedocdir}/en/kformula
 
 %files kivio
 %defattr(644,root,root,755)
 %{_datadir}/kde4/services/ServiceMenus/kivio_konqi.desktop
 #%{_iconsdir}/*/*/apps/kivio.png
-%{_kdedocdir}/en/kivio
+#%{_kdedocdir}/en/kivio
 
 %files kplato
 %defattr(644,root,root,755)

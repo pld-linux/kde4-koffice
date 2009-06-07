@@ -41,6 +41,8 @@ BuildRequires:	libexif-devel >= 0.6.12
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libtiff-devel
+BuildRequires:	libwpd-devel
+BuildRequires:	libwpg-devel
 BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel
@@ -426,6 +428,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libopencalcexport.so
 %attr(755,root,root) %{_libdir}/kde4/libopencalcimport.so
 %attr(755,root,root) %{_libdir}/kde4/libqproimport.so
+%attr(755,root,root) %{_libdir}/kde4/libwpexport.so
+%attr(755,root,root) %{_libdir}/kde4/libwpimport.so
+%attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
 %attr(755,root,root) %{_libdir}/kde4/musicshape.so
 %attr(755,root,root) %{_libdir}/kde4/pathshapes.so
 %attr(755,root,root) %{_libdir}/kde4/pictureshape.so

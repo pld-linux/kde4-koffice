@@ -50,6 +50,7 @@ BuildRequires:	python-devel >= 2.2
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qimageblitz-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	wv2-devel >= 0.3.1
 BuildRequires:	zlib-devel
 Requires:	wv2 >= 0.1.9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

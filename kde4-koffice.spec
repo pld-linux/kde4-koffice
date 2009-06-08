@@ -17,7 +17,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.0.0
-Release:	3
+Release:	4
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
@@ -34,6 +34,7 @@ BuildRequires:	exiv2-devel
 BuildRequires:	glew-devel
 BuildRequires:	gmm-devel
 BuildRequires:	gsl-devel
+BuildRequires:	kde4-kdegraphics-devel >= %{kdever}
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	lcms-devel >= 1.18

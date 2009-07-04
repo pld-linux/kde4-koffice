@@ -9,6 +9,8 @@
 %define		origname	koffice
 %define		kdever		4.2.4
 
+%bcond_with	pdf
+
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
 Summary(pt_BR.UTF-8):	Suíte de aplicativos office para o KDE
@@ -16,13 +18,15 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	2.0.0
-Release:	4
+Version:	2.0.1
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
-# Source0-md5:	46531c940d4672f5206cd60bb484f1c6
+# Source0-md5:	86fb3660c2b87495d1bf84da9044d441
 URL:		http://www.koffice.org/
+BuildRequires:	QtTest-devel
+BuildRequires:	QtUiTools-devel
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
@@ -48,7 +52,10 @@ BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel
 BuildRequires:	pkgconfig
-BuildRequires:	poppler-qt-devel >= 0.5.1
+%if %{with pdf}
+BuildRequires:	poppler-qt-devel >= 0.6
+BuildRequires:	poppler-qt-devel < 0.7
+%endif
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qimageblitz-devel
@@ -402,9 +409,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/templates/.source
 %{_desktopdir}/kde4/koffice.desktop
 %{_iconsdir}/oxygen/*/actions/*.png
+%{_iconsdir}/oxygen/*/actions/*.svgz
 %{_kdedocdir}/en/koffice
 %dir %{_datadir}/color
 %dir %{_datadir}/color/icc
+%{_datadir}/color/icc/pigment
 #
 # Files i dunno what to do with
 #
@@ -545,7 +554,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/kplato.desktop
 %{_datadir}/config/kplatorc
 %{_iconsdir}/hicolor/*/apps/kplato.png
+%{_iconsdir}/hicolor/*/apps/kplato.svgz
 %{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.png
+%{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.svgz
 %{_kdedocdir}/en/kplato
 
 %files kpresenter
@@ -609,12 +620,15 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libkritaoraexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritaoraimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritapart.so
-%attr(755,root,root) %{_libdir}/kde4/libkritapdfimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritapngexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritapngimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritatiffexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritatiffimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkrita_raw_import.so
+%if %{with pdf}
+%attr(755,root,root) %{_libdir}/kde4/libkritapdfimport.so
+%{_datadir}/applications/kde4/krita_pdf.desktop
+%endif
 %{_datadir}/applications/kde4/krita_raw.desktop
 %{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
 %{_datadir}/apps/krita
@@ -624,7 +638,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/kde4/krita_jpeg.desktop
 %{_datadir}/applications/kde4/krita_magick.desktop
 %{_datadir}/applications/kde4/krita_ora.desktop
-%{_datadir}/applications/kde4/krita_pdf.desktop
 %{_datadir}/applications/kde4/krita_png.desktop
 %{_datadir}/applications/kde4/krita_tiff.desktop
 %{_datadir}/config/kritarc

@@ -19,7 +19,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.0.2
-Release:	1
+Release:	2
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/src/%{origname}-%{version}.tar.bz2
@@ -54,7 +54,6 @@ BuildRequires:	mysql-devel
 BuildRequires:	pkgconfig
 %if %{with pdf}
 BuildRequires:	poppler-qt-devel >= 0.6
-BuildRequires:	poppler-qt-devel < 0.7
 %endif
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	qca-devel >= 2.0.0

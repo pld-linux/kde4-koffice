@@ -19,7 +19,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.1.0
-Release:	1
+Release:	2
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/%{origname}-%{version}.tar.bz2
@@ -59,9 +59,9 @@ BuildRequires:	python-devel >= 2.2
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qimageblitz-devel
 BuildRequires:	rpmbuild(macros) >= 1.129
-BuildRequires:	wv2-devel >= 0.3.1
+BuildRequires:	wv2-devel >= 0.4.1
 BuildRequires:	zlib-devel
-Requires:	wv2 >= 0.1.9
+Requires:	wv2 >= 0.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -734,7 +734,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/librtf*port.so
 %attr(755,root,root) %{_libdir}/kde4/thesaurustool.so
 %attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
-#%attr(755,root,root) %{_libdir}/kde4/libmswordodf_import.so
+%attr(755,root,root) %{_libdir}/kde4/libmswordodf_import.so
 %attr(755,root,root) %{_libdir}/kde4/libkword*.so
 %attr(755,root,root) %{_libdir}/kde4/liboowriter*port.so
 %{_datadir}/apps/kword

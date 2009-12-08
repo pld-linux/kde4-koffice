@@ -19,17 +19,17 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.1.0
-Release:	2
+Release:	3
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/%{origname}-%{version}.tar.bz2
 # Source0-md5:	e7a9c554fa2a206ec5a8898fe360bdd7
 URL:		http://www.koffice.org/
-BuildRequires:	QtTest-devel
-BuildRequires:	QtUiTools-devel
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
+BuildRequires:	QtTest-devel
+BuildRequires:	QtUiTools-devel
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.6.2
@@ -185,9 +185,9 @@ KChart jest aplikacją służącą do generowania wykresów.
 Gerador de diagramas do KOffice.
 
 %package kformula
-Summary:        KOffice - kformula
-Summary(pl.UTF-8):      KOffice - kformula
-Group:          X11/Applications
+Summary:	KOffice - kformula
+Summary(pl.UTF-8):	KOffice - kformula
+Group:		X11/Applications
 Requires:	%{name}-common = %{version}-%{release}
 
 %description kformula
@@ -554,7 +554,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/paragraphtool.desktop
 %{_datadir}/apps/formulashape
 %{_datadir}/apps/kformula
-%{_datadir}/applications/kde4/kformula.desktop
+%{_desktopdir}/kde4/kformula.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio
@@ -575,7 +575,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkdeinit4_kplato.so
 %attr(755,root,root) %{_libdir}/kde4/libkplatopart.so
 %attr(755,root,root) %{_libdir}/kde4/libkplatoworkpart.so
-%{_datadir}/applications/kde4/kplatowork.desktop
+%{_desktopdir}/kde4/kplatowork.desktop
 %{_datadir}/apps/kplato
 %{_datadir}/apps/kplatowork
 %{_datadir}/kde4/services/kplatopart.desktop
@@ -660,19 +660,19 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libkrita_raw_import.so
 %if %{with pdf}
 %attr(755,root,root) %{_libdir}/kde4/libkritapdfimport.so
-%{_datadir}/applications/kde4/krita_pdf.desktop
+%{_desktopdir}/kde4/krita_pdf.desktop
 %endif
-%{_datadir}/applications/kde4/krita_raw.desktop
+%{_desktopdir}/kde4/krita_raw.desktop
 %{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
 %{_datadir}/apps/krita
 %{_datadir}/apps/kritaplugins
-%{_datadir}/applications/kde4/krita.desktop
-%{_datadir}/applications/kde4/krita_bmp.desktop
-%{_datadir}/applications/kde4/krita_jpeg.desktop
-#%{_datadir}/applications/kde4/krita_magick.desktop
-%{_datadir}/applications/kde4/krita_ora.desktop
-%{_datadir}/applications/kde4/krita_png.desktop
-%{_datadir}/applications/kde4/krita_tiff.desktop
+%{_desktopdir}/kde4/krita.desktop
+%{_desktopdir}/kde4/krita_bmp.desktop
+%{_desktopdir}/kde4/krita_jpeg.desktop
+#%{_desktopdir}/kde4/krita_magick.desktop
+%{_desktopdir}/kde4/krita_ora.desktop
+%{_desktopdir}/kde4/krita_png.desktop
+%{_desktopdir}/kde4/krita_tiff.desktop
 %{_datadir}/config/kritarc
 %{_datadir}/color/icc/krita
 %{_datadir}/kde4/services/krita*.desktop
@@ -704,7 +704,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libkspreadpart.so
 %attr(755,root,root) %{_libdir}/kde4/spreadsheetshape.so
 %{_datadir}/apps/kspread
-%{_datadir}/applications/kde4/kspread.desktop
+%{_desktopdir}/kde4/kspread.desktop
 %{_datadir}/kde4/services/ServiceMenus/kspread_konqi.desktop
 %{_datadir}/templates/.source/SpreadSheet.kst
 %{_datadir}/templates/SpreadSheet.desktop

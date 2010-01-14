@@ -18,12 +18,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	2.1.0
-Release:	3
+Version:	2.1.1
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/%{origname}-%{version}.tar.bz2
-# Source0-md5:	e7a9c554fa2a206ec5a8898fe360bdd7
+# Source0-md5:	9955f30f43ed3f6970870f55015a1a18
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -537,8 +537,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kformula
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/kformula
-%attr(755,root,root) %{_libdir}/libkdeinit_kformula.so
+#%attr(755,root,root) %{_bindir}/kformula
+#%attr(755,root,root) %{_libdir}/libkdeinit_kformula.so
 %attr(755,root,root) %ghost %{_libdir}/libkformulalib.so.?
 %attr(755,root,root) %{_libdir}/libkformulalib.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkformulaprivate.so.?
@@ -679,7 +679,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/Illustration.desktop
 %{_datadir}/mime/packages/krita_ora.xml
 %{_iconsdir}/hicolor/*/apps/krita.png
-%{_kdedocdir}/en/krita
+#%{_kdedocdir}/en/krita
 
 %files kspread
 %defattr(644,root,root,755)

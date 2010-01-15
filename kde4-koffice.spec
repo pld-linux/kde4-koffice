@@ -28,9 +28,13 @@ URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
+BuildRequires:	Qt3Support-devel
+BuildRequires:	QtScript-devel
+BuildRequires:	QtSvg-devel
 BuildRequires:	QtTest-devel
 BuildRequires:	QtUiTools-devel
 BuildRequires:	automoc4 >= 0.9.88
+BuildRequires:	boost-devel
 BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.6.2
 BuildRequires:	eigen >= 2.0
@@ -58,6 +62,8 @@ BuildRequires:	poppler-Qt-devel >= 0.6
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qimageblitz-devel
+BuildRequires:	qt4-build
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	wv2-devel >= 0.4.1
 BuildRequires:	zlib-devel

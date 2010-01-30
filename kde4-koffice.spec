@@ -19,11 +19,12 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.1.1
-Release:	2
+Release:	3
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/%{origname}-%{version}.tar.bz2
 # Source0-md5:	9955f30f43ed3f6970870f55015a1a18
+Patch0:		%{name}-libpng.patch
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -311,6 +312,7 @@ Processador de texto do KOffice.
 
 %prep
 %setup -q -n %{origname}-%{version}
+%patch0 -p0
 
 %build
 install -d build

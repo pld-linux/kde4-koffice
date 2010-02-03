@@ -4,12 +4,13 @@
 # + OpenCTL, 0.9.2 or higher: OpenCTL is needed for some color spaces (High Dynamic Range Color Spaces, YCbCr and LMS) <http://www.openctl.org>
 # + Spnav: Spnav is the library which is required by the space navigator device plugin <http://spacenav.sourceforge.net/>
 # + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
+%bcond_without	pdf
 
 %define		_state		stable
-%define		origname	koffice
+%define		orgname		koffice
 %define		kdever		4.3.4
+%define		qtver		4.5.3
 
-%bcond_without	pdf
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
@@ -22,18 +23,18 @@ Version:	2.1.1
 Release:	3
 License:	GPL/LGPL
 Group:		X11/Applications
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{origname}-%{version}/%{origname}-%{version}.tar.bz2
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
 # Source0-md5:	9955f30f43ed3f6970870f55015a1a18
 Patch0:		%{name}-libpng.patch
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
-BuildRequires:	Qt3Support-devel
-BuildRequires:	QtScript-devel
-BuildRequires:	QtSvg-devel
-BuildRequires:	QtTest-devel
-BuildRequires:	QtUiTools-devel
+BuildRequires:	Qt3Support-devel >= %{qtver}
+BuildRequires:	QtScript-devel >= %{qtver}
+BuildRequires:	QtSvg-devel >= %{qtver}
+BuildRequires:	QtTest-devel >= %{qtver}
+BuildRequires:	QtUiTools-devel >= %{qtver}
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	boost-devel
 BuildRequires:	bzip2-devel
@@ -63,7 +64,8 @@ BuildRequires:	poppler-Qt-devel >= 0.6
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qimageblitz-devel
-BuildRequires:	qt4-build
+BuildRequires:	qt4-build >= %{qtver}
+BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	wv2-devel >= 0.4.1
@@ -311,7 +313,7 @@ również do zwykłej edycji tekstu (jak pisanie listów, raportów, itp.).
 Processador de texto do KOffice.
 
 %prep
-%setup -q -n %{origname}-%{version}
+%setup -q -n %{orgname}-%{version}
 %patch0 -p0
 
 %build

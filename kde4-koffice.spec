@@ -4,13 +4,14 @@
 # + OpenCTL, 0.9.2 or higher: OpenCTL is needed for some color spaces (High Dynamic Range Color Spaces, YCbCr and LMS) <http://www.openctl.org>
 # + Spnav: Spnav is the library which is required by the space navigator device plugin <http://spacenav.sourceforge.net/>
 # + pstoedit: The Karbon eps import filter will not be built. <http://www.pstoedit.net/>
-%bcond_without	pdf
+#
+# Conditional build:
+%bcond_without	pdf		# build without PDF support
 
 %define		_state		stable
 %define		orgname		koffice
 %define		kdever		4.3.4
 %define		qtver		4.5.3
-
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
@@ -274,8 +275,8 @@ LMS, in 8 and 16 bits per channel
 
 %description krita -l pl.UTF-8
 Krita jest aplikacją do edycji grafiki bitmapowej. Wspiera różne
-przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR
-oraz LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
+przestrzenie barw, jak np. RGB, skala szarości, CMYK, Lab, YCBCR oraz
+LMS - zarówno w trybie 8 jak i 16 bitowym na kanał.
 
 %package kspread
 Summary:	KOffice - KSpread

@@ -39,8 +39,8 @@ BuildRequires:	QtUiTools-devel >= %{qtver}
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	boost-devel
 BuildRequires:	bzip2-devel
-BuildRequires:	cmake >= 2.6.2
-BuildRequires:	eigen >= 2.0
+BuildRequires:	cmake >= 2.8.0
+BuildRequires:	eigen >= 1:2.0.12
 BuildRequires:	exiv2-devel
 BuildRequires:	glew-devel
 BuildRequires:	gmm-devel

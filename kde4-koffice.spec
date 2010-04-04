@@ -10,8 +10,8 @@
 
 %define		_state		stable
 %define		orgname		koffice
-%define		kdever		4.3.4
-%define		qtver		4.5.3
+%define		kdever		4.4.2
+%define		qtver		4.6.2
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
@@ -20,12 +20,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	2.1.1
-Release:	5
+Version:	2.1.2
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	9955f30f43ed3f6970870f55015a1a18
+# Source0-md5:	8bd87b20e2a134cfd2f7db5f4fee4330
 Patch0:		%{name}-libpng.patch
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel

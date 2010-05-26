@@ -421,6 +421,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkoplugin.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkowidgets.so.?
 %attr(755,root,root) %{_libdir}/libkowidgets.so.*.*.*
+%attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.?
 #%attr(755,root,root) %{_libdir}/kde4/clipartthumbnail.so
 #%attr(755,root,root) %{_libdir}/kde4/kodocinfopropspage.so
 %attr(755,root,root) %{_libdir}/kde4/kofficescan.so
@@ -702,8 +704,6 @@ rm -rf $RPM_BUILD_ROOT
 %files kpresenter
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kpresenter
-%attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.?
 %attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
 %attr(755,root,root) %{_libdir}/kde4/kpresenter*.so
 %attr(755,root,root) %{_libdir}/kde4/libkpresenter*.so

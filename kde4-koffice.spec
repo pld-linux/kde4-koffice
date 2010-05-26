@@ -619,9 +619,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kformdesigner_stdwidgets.so
 %attr(755,root,root) %{_libdir}/kde4/krossmodulekexidb.so
 %{_datadir}/applications/kde4/kexi.desktop
-%{_datadir}/apps/kexi/icons/hicolor/*x*/actions
-%{_datadir}/apps/kexi/icons/oxygen/*x*/actions
-%{_datadir}/apps/kexi/icons/oxygen/*x*/mimetypes
+%{_datadir}/apps/kexi
 %{_datadir}/config/kexirc
 %dir %{_datadir}/kde4/services/kexi
 %{_datadir}/kde4/services/kexi/kexicsv_importexporthandler.desktop

@@ -421,6 +421,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkoplugin.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkowidgets.so.?
 %attr(755,root,root) %{_libdir}/libkowidgets.so.*.*.*
+%attr(755,root,root) %{_libdir}/libkarbonui.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkarbonui.so.?
 %attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.?
 #%attr(755,root,root) %{_libdir}/kde4/clipartthumbnail.so
@@ -548,8 +550,6 @@ rm -rf $RPM_BUILD_ROOT
 %files karbon
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/karbon
-%attr(755,root,root) %{_libdir}/libkarbonui.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkarbonui.so.?
 %attr(755,root,root) %{_libdir}/libkdeinit4_karbon.so
 %attr(755,root,root) %{_libdir}/kde4/*karbon*.so
 #%attr(755,root,root) %{_libdir}/kde4/*wmf*port.so

@@ -193,6 +193,19 @@ KChart jest aplikacją służącą do generowania wykresów.
 %description kchart -l pt_BR.UTF-8
 Gerador de diagramas do KOffice.
 
+%package kexi
+Summary:        KOffice - Kexi
+Summary(pl.UTF-8):      KOffice - Kexi
+Group:          X11/Applications
+Requires:       %{name}-common = %{version}-%{release}
+
+%description kexi
+Kexi is KOffice part for using database system such as MySQL.
+
+%description kexi -l pl.UTF-8
+Kexi jest aplikacją służącą do korzystania z systemów baz danych
+takich jak MySQL.
+
 %package kformula
 Summary:	KOffice - kformula
 Summary(pl.UTF-8):	KOffice - kformula
@@ -543,6 +556,74 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ServiceMenus/kchart_konqi.desktop
 %{_iconsdir}/hicolor/*/apps/kchart.png
 %{_kdedocdir}/en/kchart
+
+%files kexi
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/kexi
+%attr(755,root,root) %ghost %{_libdir}/libkexicore.so.?
+%attr(755,root,root) %{_libdir}/libkexicore.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexidatatable.so.?
+%attr(755,root,root) %{_libdir}/libkexidatatable.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexidb.so.?
+%attr(755,root,root) %{_libdir}/libkexidb.so.*.*.*
+%attr(755,root,root) %{_libdir}/libkexiextendedwidgets.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexiformutils.so.?
+%attr(755,root,root) %{_libdir}/libkexiformutils.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexiguiutils.so.?
+%attr(755,root,root) %{_libdir}/libkexiguiutils.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkeximain.so.?
+%attr(755,root,root) %{_libdir}/libkeximain.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkeximigrate.so.?
+%attr(755,root,root) %{_libdir}/libkeximigrate.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexirelationsview.so.?
+%attr(755,root,root) %{_libdir}/libkexirelationsview.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexiutils.so.?
+%attr(755,root,root) %{_libdir}/libkexiutils.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkformdesigner.so.?
+%attr(755,root,root) %{_libdir}/libkformdesigner.so.*.*.*
+%attr(755,root,root) %{_libdir}/kde4/kexidb_mysqldriver.so
+%attr(755,root,root) %{_libdir}/kde4/kexidb_sqlite3driver.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_csv_importexport.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_form.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_migration.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_query.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_report.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_script.so
+%attr(755,root,root) %{_libdir}/kde4/kexihandler_table.so
+%attr(755,root,root) %{_libdir}/kde4/keximigrate_kspread.so
+%attr(755,root,root) %{_libdir}/kde4/keximigrate_mdb.so
+%attr(755,root,root) %{_libdir}/kde4/keximigrate_mysql.so
+%attr(755,root,root) %{_libdir}/kde4/keximigrate_txt.so
+%attr(755,root,root) %{_libdir}/kde4/kexirelationdesignshape.so
+%attr(755,root,root) %{_libdir}/kde4/kformdesigner_containers.so
+%attr(755,root,root) %{_libdir}/kde4/kformdesigner_kexidbwidgets.so
+%attr(755,root,root) %{_libdir}/kde4/kformdesigner_stdwidgets.so
+%attr(755,root,root) %{_libdir}/kde4/krossmodulekexidb.so
+%{_datadir}/applications/kde4/kexi.desktop
+%{_datadir}/apps/kexi/icons/hicolor/*x*/actions
+%{_datadir}/apps/kexi/icons/oxygen/*x*/actions
+%{_datadir}/apps/kexi/icons/oxygen/*x*/mimetypes
+%{_datadir}/config/kexirc
+%dir %{_datadir}/kde4/services/kexi
+%{_datadir}/kde4/services/kexi/kexicsv_importexporthandler.desktop
+%{_datadir}/kde4/services/kexi/kexiformhandler.desktop
+%{_datadir}/kde4/services/kexi/keximigrationhandler.desktop
+%{_datadir}/kde4/services/kexi/kexiqueryhandler.desktop
+%{_datadir}/kde4/services/kexi/kexireporthandler.desktop
+%{_datadir}/kde4/services/kexi/kexiscripthandler.desktop
+%{_datadir}/kde4/services/kexi/kexitablehandler.desktop
+%{_datadir}/kde4/services/kexidb_mysqldriver.desktop
+%{_datadir}/kde4/services/kexidb_sqlite3driver.desktop
+%{_datadir}/kde4/services/keximigrate_kspread.desktop
+%{_datadir}/kde4/services/keximigrate_mdb.desktop
+%{_datadir}/kde4/services/keximigrate_mysql.desktop
+%{_datadir}/kde4/services/keximigrate_txt.desktop
+%{_datadir}/kde4/services/kexirelationdesignshape.desktop
+%dir %{_datadir}/kde4/services/kformdesigner
+%{_datadir}/kde4/services/kformdesigner/kformdesigner_containers.desktop
+%{_datadir}/kde4/services/kformdesigner/kformdesigner_kexidbfactory.desktop
+%{_datadir}/kde4/services/kformdesigner/kformdesigner_stdwidgets.desktop
+%{_kdedocdir}/en/kexi
 
 %files kformula
 %defattr(644,root,root,755)

@@ -397,6 +397,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkopageapp.so.?
 %attr(755,root,root) %{_libdir}/libkotext.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkotext.so.?
+%attr(755,root,root) %ghost %{_libdir}/libkoproperty.so.?
+%attr(755,root,root) %{_libdir}/libkoproperty.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkoreport.so.?
+%attr(755,root,root) %{_libdir}/libkoreport.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkowv2.so.?
+%attr(755,root,root) %{_libdir}/libkowv2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmsooxml.so.?
+%attr(755,root,root) %{_libdir}/libmsooxml.so.*.*.*
 %attr(755,root,root) %{_libdir}/libkowmf.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkowmf.so.?
 %attr(755,root,root) %{_libdir}/libkwmf.so.*.*.*
@@ -423,6 +431,10 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_libdir}/kde4/koffice_graya_u16_plugin.so
 %attr(755,root,root) %{_libdir}/kde4/kofficedockers.so
 #%attr(755,root,root) %{_libdir}/kde4/kofficegrayau8plugin.so
+%attr(755,root,root) %{_libdir}/kde4/kolcmsengine.so
+%attr(755,root,root) %{_libdir}/kde4/kprvariables.so
+%attr(755,root,root) %{_libdir}/kde4/vectorshape.so
+%attr(755,root,root) %{_libdir}/kde4/videoshape.so
 %{_datadir}/apps/koffice
 #%{_datadir}/kde4/services/clipartthumbnail.desktop
 #%{_datadir}/kde4/services/kodocinfopropspage.desktop
@@ -433,6 +445,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kounavail.desktop
 %{_datadir}/kde4/services/xslt_*.desktop
 %{_datadir}/kde4/services/generic_filter.desktop
+%{_datadir}/kde4/services/kolcmsengine.desktop
+%{_datadir}/kde4/services/kprvariables.desktop
+%{_datadir}/kde4/services/vectorshape.desktop
+%{_datadir}/kde4/services/videoshape.desktop
+%{_datadir}/mime/packages/msooxml-all.xml
 %{_datadir}/kde4/servicetypes/*
 %dir %{_datadir}/templates/.source
 %{_desktopdir}/kde4/koffice.desktop
@@ -461,7 +478,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libcsvexport.so
 %attr(755,root,root) %{_libdir}/kde4/libcsvimport.so
 %attr(755,root,root) %{_libdir}/kde4/libdbaseimport.so
-%attr(755,root,root) %{_libdir}/kde4/libexcelimport.so
 %attr(755,root,root) %{_libdir}/kde4/libgnumericexport.so
 %attr(755,root,root) %{_libdir}/kde4/libgnumericimport.so
 %attr(755,root,root) %{_libdir}/kde4/libopencalcexport.so
@@ -637,9 +653,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkformulaprivate.so.?
 %attr(755,root,root) %{_libdir}/libkformulaprivate.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/formulashape.so
+%attr(755,root,root) %{_libdir}/kde4/libexcelimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkformulapart.so
 %attr(755,root,root) %{_libdir}/kde4/libicalendarexport.so
-%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
+%attr(755,root,root) %{_libdir}/kde4/libxlsximport.so
 %attr(755,root,root) %{_libdir}/kde4/paragraphtool.so
 %{_datadir}/kde4/services/ServiceMenus/kformula_konqi.desktop
 %{_datadir}/kde4/services/formulashape.desktop
@@ -692,7 +709,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
 %attr(755,root,root) %{_libdir}/kde4/kpresenter*.so
 %attr(755,root,root) %{_libdir}/kde4/libkpresenter*.so
-#%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
+%attr(755,root,root) %{_libdir}/kde4/libpptximport.so
+%attr(755,root,root) %{_libdir}/kde4/libpowerpointimport.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_barwipe.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_clockwipe.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_edgewipe.so
@@ -804,6 +822,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kspreadtextmodule.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadtrigonometrymodule.so
 %attr(755,root,root) %{_libdir}/kde4/libkspreadhtmlexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkspreadhtmlimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkspreadlatexexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkspreadpart.so
 %attr(755,root,root) %{_libdir}/kde4/spreadsheetshape.so
@@ -814,6 +833,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/SpreadSheet.desktop
 %{_datadir}/kde4/services/kspread*.desktop
 %{_datadir}/kde4/services/spreadsheetshape.desktop
+%{_datadir}/config/kspreadrc
 %{_datadir}/config.kcfg/kspread.kcfg
 %{_iconsdir}/hicolor/*/apps/kspread.png
 %{_kdedocdir}/en/kspread
@@ -827,6 +847,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.?
 %attr(755,root,root) %{_libdir}/libkdeinit4_kthesaurus.so
 %attr(755,root,root) %{_libdir}/kde4/libabiword*port.so
+%attr(755,root,root) %{_libdir}/kde4/libdocximport.so
 %attr(755,root,root) %{_libdir}/kde4/libhancomwordimport.so
 %attr(755,root,root) %{_libdir}/kde4/libapplixwordimport.so
 %attr(755,root,root) %{_libdir}/kde4/libascii*port.so

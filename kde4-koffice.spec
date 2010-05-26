@@ -361,6 +361,9 @@ rm -rf $RPM_BUILD_ROOT
 %post	kchart	-p /sbin/ldconfig
 %postun	kchart	-p /sbin/ldconfig
 
+%post	kexi	-p /sbin/ldconfig
+%postun	kexi	-p /sbin/ldconfig
+
 %post	kformula	-p /sbin/ldconfig
 %postun	kformula	-p /sbin/ldconfig
 
@@ -728,6 +731,8 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibpaintop.so.?
 %attr(755,root,root) %{_libdir}/libkritalibpaintop.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkrossmodulekrita.so.?
+%attr(755,root,root) %{_libdir}/libkrossmodulekrita.so.*.*.*
 #%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamiccoloringprogram.so.?
 #%attr(755,root,root) %{_libdir}/libkritabasicdynamiccoloringprogram.so.*.*.*
 #%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamicshapeprogram.so.?
@@ -748,6 +753,12 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libkritatiffexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritatiffimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkrita_raw_import.so
+%attr(755,root,root) %{_libdir}/kde4/libkritabmpimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritagifimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritappmexport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritappmimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritapsdimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritaxcfimport.so
 %if %{with pdf}
 %attr(755,root,root) %{_libdir}/kde4/libkritapdfimport.so
 %{_desktopdir}/kde4/krita_pdf.desktop
@@ -756,6 +767,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
 %{_datadir}/apps/krita
 %{_datadir}/apps/kritaplugins
+%{_datadir}/applications/kde4/krita_gif.desktop
+%{_datadir}/applications/kde4/krita_ppm.desktop
+%{_datadir}/applications/kde4/krita_xcf.desktop
 %{_desktopdir}/kde4/krita.desktop
 %{_desktopdir}/kde4/krita_bmp.desktop
 %{_desktopdir}/kde4/krita_jpeg.desktop
@@ -852,5 +866,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/*.h
 %{_includedir}/changetracker
+%{_includedir}/kexi
 %{_includedir}/styles
 %{_datadir}/apps/cmake/modules/FindKOfficeLibs.cmake

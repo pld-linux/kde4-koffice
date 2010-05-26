@@ -68,6 +68,7 @@ BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	sqlite3-devel >= 3.6.23
 BuildRequires:	wv2-devel >= 0.4.1
 BuildRequires:	xbase-devel
 BuildRequires:	zlib-devel

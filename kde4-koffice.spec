@@ -21,7 +21,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.2.0
-Release:	1
+Release:	0.1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
@@ -373,10 +373,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkdchart.so.?
 %attr(755,root,root) %{_libdir}/libkochart.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkochart.so.?
-%attr(755,root,root) %{_libdir}/libkoffice_graya_u16.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkoffice_graya_u16.so.?
-%attr(755,root,root) %{_libdir}/libkofficegrayau8colorspace.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkofficegrayau8colorspace.so.?
+#%attr(755,root,root) %{_libdir}/libkoffice_graya_u16.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkoffice_graya_u16.so.?
+#%attr(755,root,root) %{_libdir}/libkofficegrayau8colorspace.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkofficegrayau8colorspace.so.?
 %attr(755,root,root) %{_libdir}/libkopageapp.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkopageapp.so.?
 %attr(755,root,root) %{_libdir}/libkotext.so.*.*.*
@@ -387,33 +387,33 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkwmf.so.?
 %attr(755,root,root) %{_libdir}/libkwordexportfilters.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.?
-%attr(755,root,root) %ghost %{_libdir}/libkoaction.so.?
-%attr(755,root,root) %{_libdir}/libkoaction.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkobase.so.?
-%attr(755,root,root) %{_libdir}/libkobase.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkocolorwidgets.so.?
-%attr(755,root,root) %{_libdir}/libkocolorwidgets.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkoaction.so.?
+#%attr(755,root,root) %{_libdir}/libkoaction.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkobase.so.?
+#%attr(755,root,root) %{_libdir}/libkobase.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkocolorwidgets.so.?
+#%attr(755,root,root) %{_libdir}/libkocolorwidgets.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkoplugin.so.?
 %attr(755,root,root) %{_libdir}/libkoplugin.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkowidgets.so.?
 %attr(755,root,root) %{_libdir}/libkowidgets.so.*.*.*
-%attr(755,root,root) %{_libdir}/kde4/clipartthumbnail.so
-%attr(755,root,root) %{_libdir}/kde4/kodocinfopropspage.so
+#%attr(755,root,root) %{_libdir}/kde4/clipartthumbnail.so
+#%attr(755,root,root) %{_libdir}/kde4/kodocinfopropspage.so
 %attr(755,root,root) %{_libdir}/kde4/kofficescan.so
 %attr(755,root,root) %{_libdir}/kde4/kofficethumbnail.so
 %attr(755,root,root) %{_libdir}/kde4/libgenerickofilter.so
 %attr(755,root,root) %{_libdir}/kde4/libxslt*port*.so
 %attr(755,root,root) %{_libdir}/kde4/libkounavailpart.so
-%attr(755,root,root) %{_libdir}/kde4/koffice_graya_u16_plugin.so
+#%attr(755,root,root) %{_libdir}/kde4/koffice_graya_u16_plugin.so
 %attr(755,root,root) %{_libdir}/kde4/kofficedockers.so
-%attr(755,root,root) %{_libdir}/kde4/kofficegrayau8plugin.so
+#%attr(755,root,root) %{_libdir}/kde4/kofficegrayau8plugin.so
 %{_datadir}/apps/koffice
-%{_datadir}/kde4/services/clipartthumbnail.desktop
-%{_datadir}/kde4/services/kodocinfopropspage.desktop
+#%{_datadir}/kde4/services/clipartthumbnail.desktop
+#%{_datadir}/kde4/services/kodocinfopropspage.desktop
 %{_datadir}/kde4/services/kofficethumbnail.desktop
-%{_datadir}/kde4/services/koffice_graya_u16_plugin.desktop
+#%{_datadir}/kde4/services/koffice_graya_u16_plugin.desktop
 %{_datadir}/kde4/services/kofficedockers.desktop
-%{_datadir}/kde4/services/kofficegrayaplugin.desktop
+#%{_datadir}/kde4/services/kofficegrayaplugin.desktop
 %{_datadir}/kde4/services/kounavail.desktop
 %{_datadir}/kde4/services/xslt_*.desktop
 %{_datadir}/kde4/services/generic_filter.desktop
@@ -465,14 +465,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkokross.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkoodf.so.?
 %attr(755,root,root) %{_libdir}/libkoodf.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkostore.so.?
-%attr(755,root,root) %{_libdir}/libkostore.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkostore.so.?
+#%attr(755,root,root) %{_libdir}/libkostore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkomain.so.?
 %attr(755,root,root) %{_libdir}/libkomain.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libflake.so.?
 %attr(755,root,root) %{_libdir}/libflake.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkoresources.so.?
-%attr(755,root,root) %{_libdir}/libkoresources.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkoresources.so.?
+#%attr(755,root,root) %{_libdir}/libkoresources.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libpigmentcms.so.?
 %attr(755,root,root) %{_libdir}/libpigmentcms.so.*.*.*
 %{_datadir}/kde4/services/Filterkpr2odf.desktop
@@ -598,7 +598,7 @@ rm -rf $RPM_BUILD_ROOT
 #%{_iconsdir}/hicolor/*/apps/kplato.svgz
 %{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.png
 #%{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.svgz
-%{_kdedocdir}/en/kplato
+#%{_kdedocdir}/en/kplato
 
 %files kpresenter
 %defattr(644,root,root,755)
@@ -641,10 +641,10 @@ rm -rf $RPM_BUILD_ROOT
 #%attr(755,root,root) %{_libdir}/libKritaRulerAssistantCommon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibbrush.so.?
 %attr(755,root,root) %{_libdir}/libkritalibbrush.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkrita_xyz_u16.so.?
-%attr(755,root,root) %{_libdir}/libkrita_xyz_u16.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.?
-%attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkrita_xyz_u16.so.?
+#%attr(755,root,root) %{_libdir}/libkrita_xyz_u16.so.*.*.*
+#%attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.?
+#%attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibpaintop.so.?
 %attr(755,root,root) %{_libdir}/libkritalibpaintop.so.*.*.*
 #%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamiccoloringprogram.so.?
@@ -742,7 +742,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libwm*port.so
 %attr(755,root,root) %{_libdir}/kde4/librtf*port.so
 %attr(755,root,root) %{_libdir}/kde4/thesaurustool.so
-%attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
+#%attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
 %attr(755,root,root) %{_libdir}/kde4/libmswordodf_import.so
 %attr(755,root,root) %{_libdir}/kde4/libkword*.so
 %attr(755,root,root) %{_libdir}/kde4/liboowriter*port.so

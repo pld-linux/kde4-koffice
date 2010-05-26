@@ -21,7 +21,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.2.0
-Release:	1
+Release:	2
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
@@ -69,6 +69,7 @@ BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	wv2-devel >= 0.4.1
+BuildRequires:	xbase-devel
 BuildRequires:	zlib-devel
 Requires:	wv2 >= 0.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -604,6 +605,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkformdesigner.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/kexidb_mysqldriver.so
 %attr(755,root,root) %{_libdir}/kde4/kexidb_sqlite3driver.so
+%attr(755,root,root) %{_libdir}/kde4/kexidb_xbasedriver.so
 %attr(755,root,root) %{_libdir}/kde4/kexihandler_csv_importexport.so
 %attr(755,root,root) %{_libdir}/kde4/kexihandler_form.so
 %attr(755,root,root) %{_libdir}/kde4/kexihandler_migration.so
@@ -615,6 +617,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/keximigrate_mdb.so
 %attr(755,root,root) %{_libdir}/kde4/keximigrate_mysql.so
 %attr(755,root,root) %{_libdir}/kde4/keximigrate_txt.so
+%attr(755,root,root) %{_libdir}/kde4/keximigrate_xbase.so
 %attr(755,root,root) %{_libdir}/kde4/kexirelationdesignshape.so
 %attr(755,root,root) %{_libdir}/kde4/kformdesigner_containers.so
 %attr(755,root,root) %{_libdir}/kde4/kformdesigner_kexidbwidgets.so
@@ -633,10 +636,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kexi/kexitablehandler.desktop
 %{_datadir}/kde4/services/kexidb_mysqldriver.desktop
 %{_datadir}/kde4/services/kexidb_sqlite3driver.desktop
+%{_datadir}/kde4/services/kexidb_xbasedriver.desktop
 %{_datadir}/kde4/services/keximigrate_kspread.desktop
 %{_datadir}/kde4/services/keximigrate_mdb.desktop
 %{_datadir}/kde4/services/keximigrate_mysql.desktop
 %{_datadir}/kde4/services/keximigrate_txt.desktop
+%{_datadir}/kde4/services/keximigrate_xbase.desktop
 %{_datadir}/kde4/services/kexirelationdesignshape.desktop
 %dir %{_datadir}/kde4/services/kformdesigner
 %{_datadir}/kde4/services/kformdesigner/kformdesigner_containers.desktop

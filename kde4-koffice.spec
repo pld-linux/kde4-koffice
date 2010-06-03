@@ -41,6 +41,8 @@ BuildRequires:	bzip2-devel
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	eigen >= 1:2.0.12-3
 BuildRequires:	exiv2-devel
+BuildRequires:	fftw3-devel
+BuildRequires:	giflib-devel
 BuildRequires:	glew-devel
 BuildRequires:	gmm-devel
 BuildRequires:	gsl-devel
@@ -51,6 +53,7 @@ BuildRequires:	lcms-devel >= 1.18
 BuildRequires:	libexif-devel >= 0.6.12
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
+BuildRequires:	libpqxx-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libwpd-devel
 BuildRequires:	libwpg-devel
@@ -68,6 +71,7 @@ BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	soprano-devel
 BuildRequires:	sqlite3-devel >= 3.6.23
 BuildRequires:	wv2-devel >= 0.4.1
 BuildRequires:	xbase-devel

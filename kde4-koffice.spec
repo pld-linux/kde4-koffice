@@ -674,7 +674,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/paragraphtool.desktop
 %{_datadir}/apps/formulashape
 %{_datadir}/apps/kformula
-%{_desktopdir}/kde4/kformula.desktop
+#%%{_desktopdir}/kde4/kformula.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio

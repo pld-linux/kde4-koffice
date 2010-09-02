@@ -10,8 +10,8 @@
 
 %define		_state		stable
 %define		orgname		koffice
-%define		kdever		4.4.4
-%define		qtver		4.6.2
+%define		kdever		4.4.5
+%define		qtver		4.6.3
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE

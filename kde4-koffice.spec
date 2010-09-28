@@ -8,7 +8,7 @@
 # Conditional build:
 %bcond_without	pdf		# build without PDF support
 
-%define		_state		stable
+%define		_state		unstable
 %define		orgname		koffice
 %define		kdever		4.4.5
 %define		qtver		4.6.3
@@ -20,12 +20,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	2.2.2
-Release:	2
+Version:	2.2.81
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	f987ef488888311db04f313ef2c1ed74
+# Source0-md5:	cc06705b644552e3a87c2e5fc7eedb18
 URL:		http://www.koffice.org/
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
@@ -571,18 +571,18 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kchart
 %defattr(644,root,root,755)
-%attr(755,root,root) %ghost %{_libdir}/libkchartcommon.so.?
-%attr(755,root,root) %{_libdir}/libkchartcommon.so.*.*.*
+#%%attr(755,root,root) %ghost %{_libdir}/libkchartcommon.so.?
+#%%attr(755,root,root) %{_libdir}/libkchartcommon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libchartshapelib.so.?
 %attr(755,root,root) %{_libdir}/libchartshapelib.so.*.*.*
-%attr(755,root,root) %{_libdir}/kde4/libkchart*.so
+#%%attr(755,root,root) %{_libdir}/kde4/libkchart*.so
 %attr(755,root,root) %{_libdir}/kde4/chartshape.so
-%{_datadir}/apps/kchart
+#%%{_datadir}/apps/kchart
 %{_datadir}/kde4/services/kchart*.desktop
 %{_datadir}/kde4/services/chartshape.desktop
 %{_datadir}/kde4/services/ServiceMenus/kchart_konqi.desktop
-%{_iconsdir}/hicolor/*/apps/kchart.png
-%{_kdedocdir}/en/kchart
+#%%{_iconsdir}/hicolor/*/apps/kchart.png
+#%%{_kdedocdir}/en/kchart
 
 %files kexi
 %defattr(644,root,root,755)
@@ -656,7 +656,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kformula
 %defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kformula
+%attr(755,root,root) %{_bindir}/kformula
 #%attr(755,root,root) %{_libdir}/libkdeinit_kformula.so
 %attr(755,root,root) %ghost %{_libdir}/libkformulalib.so.?
 %attr(755,root,root) %{_libdir}/libkformulalib.so.*.*.*
@@ -674,7 +674,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/paragraphtool.desktop
 %{_datadir}/apps/formulashape
 %{_datadir}/apps/kformula
-#%%{_desktopdir}/kde4/kformula.desktop
+%{_desktopdir}/kde4/kformula.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio

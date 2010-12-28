@@ -55,8 +55,8 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libpqxx-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libwpd-devel
-BuildRequires:	libwpg-devel
+BuildRequires:	libwpd-devel >= 0.8.14
+BuildRequires:	libwpg-devel >= 0.1.3
 BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel

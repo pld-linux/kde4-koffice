@@ -800,6 +800,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/kde4/krita_xcf.desktop
 %{_desktopdir}/kde4/krita.desktop
 %{_desktopdir}/kde4/krita_bmp.desktop
+%{_desktopdir}/kde4/krita_jp2.desktop
 %{_desktopdir}/kde4/krita_jpeg.desktop
 #%{_desktopdir}/kde4/krita_magick.desktop
 %{_desktopdir}/kde4/krita_ora.desktop

@@ -60,6 +60,7 @@ BuildRequires:	libwpg-devel >= 0.1.3
 BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel
+BuildRequires:	openjpeg-devel >= 1.3
 BuildRequires:	pkgconfig
 %if %{with pdf}
 BuildRequires:	poppler-Qt-devel >= 0.6

@@ -493,9 +493,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libopencalcexport.so
 %attr(755,root,root) %{_libdir}/kde4/libopencalcimport.so
 %attr(755,root,root) %{_libdir}/kde4/libqproimport.so
-#%%attr(755,root,root) %{_libdir}/kde4/libwpexport.so
-#%%attr(755,root,root) %{_libdir}/kde4/libwpimport.so
-#%%attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
+%attr(755,root,root) %{_libdir}/kde4/libwpexport.so
+%attr(755,root,root) %{_libdir}/kde4/libwpimport.so
+%attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
 %attr(755,root,root) %{_libdir}/kde4/musicshape.so
 %attr(755,root,root) %{_libdir}/kde4/pathshapes.so
 %attr(755,root,root) %{_libdir}/kde4/pictureshape.so
@@ -769,6 +769,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libkritabmpexport.so
 #%attr(755,root,root) %{_libdir}/kde4/libkritagmagickexport.so
 #%attr(755,root,root) %{_libdir}/kde4/libkritagmagickimport.so
+%attr(755,root,root) %{_libdir}/kde4/libkritajp2export.so
+%attr(755,root,root) %{_libdir}/kde4/libkritajp2import.so
 %attr(755,root,root) %{_libdir}/kde4/libkritajpegexport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritajpegimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritaoraexport.so

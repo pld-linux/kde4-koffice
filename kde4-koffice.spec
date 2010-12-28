@@ -21,7 +21,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.2.2
-Release:	4
+Release:	5
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
@@ -493,9 +493,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libopencalcexport.so
 %attr(755,root,root) %{_libdir}/kde4/libopencalcimport.so
 %attr(755,root,root) %{_libdir}/kde4/libqproimport.so
-%attr(755,root,root) %{_libdir}/kde4/libwpexport.so
-%attr(755,root,root) %{_libdir}/kde4/libwpimport.so
-%attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
+#%%attr(755,root,root) %{_libdir}/kde4/libwpexport.so
+#%%attr(755,root,root) %{_libdir}/kde4/libwpimport.so
+#%%attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
 %attr(755,root,root) %{_libdir}/kde4/musicshape.so
 %attr(755,root,root) %{_libdir}/kde4/pathshapes.so
 %attr(755,root,root) %{_libdir}/kde4/pictureshape.so

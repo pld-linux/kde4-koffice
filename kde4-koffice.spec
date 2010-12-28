@@ -27,7 +27,7 @@ Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
 # Source0-md5:	f987ef488888311db04f313ef2c1ed74
 URL:		http://www.koffice.org/
-Patch0:		%{name}-libpwdg.patch
+Patch0:		%{name}-libwpdg.patch
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel

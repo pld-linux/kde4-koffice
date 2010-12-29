@@ -141,17 +141,6 @@
  class WPXMemoryInputStream : public WPXInputStream
  {
  public:
-@@ -59,8 +159,8 @@
- };
- 
- 
--WPXMemoryInputStream::WPXMemoryInputStream(uint8_t *data, size_t size) :
--        WPXInputStream(false),
-+WPXMemoryInputStream::WPXMemoryInputStream(unsigned char *data, unsigned long size) :
-+        WPXInputStream(),
-         m_offset(0),
-         m_data(data),
-         m_size(size),
 @@ -125,13 +225,70 @@
  
      return false;

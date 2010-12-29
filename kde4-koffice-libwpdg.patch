@@ -244,3 +244,98 @@
      delete instream;
  
      if (error != WPD_OK)
+--- filters/karbon/wpg/import/WPGImport.cpp.orig	2010-12-28 19:07:46.955718206 +0100
++++ filters/karbon/wpg/import/WPGImport.cpp	2010-12-28 19:54:03.310246629 +0100
+@@ -33,7 +33,11 @@
+ #include <KoXmlWriter.h>
+ 
+ #include <libwpg/libwpg.h>
++#if LIBWPG_VERSION_MINOR<2
+ #include <libwpg/WPGStreamImplementation.h>
++#else
++#include <libwpd-stream/libwpd-stream.h>
++#endif
+ 
+ #include "FileOutputHandler.hxx"
+ #include "OdgExporter.hxx"
+@@ -83,7 +87,7 @@
+     if (to != "application/vnd.oasis.opendocument.graphics")
+         return KoFilter::NotImplemented;
+ 
+-
++#if LIBWPG_VERSION_MINOR<2
+     WPXInputStream* input = new libwpg::WPGFileStream(m_chain->inputFile().toLocal8Bit());
+     if (input->isOLEStream()) {
+         WPXInputStream* olestream = input->getDocumentOLEStream();
+@@ -92,6 +96,16 @@
+             input = olestream;
+         }
+     }
++#else
++    WPXInputStream* input = new WPXFileStream(m_chain->inputFile().toLocal8Bit());
++    if (input->isOLEStream()) {
++        WPXInputStream* olestream = input->getDocumentOLEStream("Anything");
++        if (olestream) {
++            delete input;
++            input = olestream;
++        }
++     }
++#endif
+ 
+     if (!libwpg::WPGraphics::isSupported(input)) {
+         std::cerr << "ERROR: Unsupported file format (unsupported version) or file is encrypted!" << std::endl;
+--- filters/karbon/wpg/import/OdgExporter.hxx.orig	2010-12-28 19:12:45.376108487 +0100
++++ filters/karbon/wpg/import/OdgExporter.hxx	2010-12-28 20:02:57.902052785 +0100
+@@ -39,6 +39,7 @@
+ 			     const bool isFlatXML = false);
+ 	~OdgExporter();
+ 
++#if LIBWPG_VERSION_MINOR<2
+ 	void startGraphics(double imageWidth, double imageHeight);
+ 	void endGraphics();
+ 	void startLayer(unsigned int id);
+@@ -72,6 +73,44 @@
+ 	std::ostringstream m_value, m_name;
+ 	double m_width, m_height;
+ 	const bool m_isFlatXML;
++#else
++	virtual void startGraphics(const ::WPXPropertyList &propList);
++	virtual void endGraphics();
++	virtual void setStyle(const ::WPXPropertyList &propList, const ::WPXPropertyListVector &gradient);
++	virtual void startLayer(const ::WPXPropertyList &propList);
++	virtual void endLayer();
++	virtual void drawRectangle(const ::WPXPropertyList& propList);
++	virtual void drawEllipse(const ::WPXPropertyList& propList);
++	virtual void drawPolygon(const ::WPXPropertyListVector &vertices);
++	virtual void drawPath(const ::WPXPropertyListVector &path);
++	virtual void drawGraphicObject(const ::WPXPropertyList &propList, const ::WPXBinaryData &binaryData);
++	virtual void startEmbeddedGraphics(const ::WPXPropertyList &propList);
++	virtual void endEmbeddedGraphics();
++	virtual void drawPolyline(const ::WPXPropertyListVector &vertices);
++	virtual void startTextObject(const ::WPXPropertyList &propList, const ::WPXPropertyListVector &path);
++	virtual void endTextObject();
++	virtual void startTextLine(const ::WPXPropertyList &propList);
++	virtual void endTextLine();
++	virtual void startTextSpan(const ::WPXPropertyList &propList);
++	virtual void endTextSpan();
++	virtual void insertText(const ::WPXString &str);
++
++
++private:
++	std::vector <GraphicsElement *> mBodyElements;
++	std::vector <GraphicsElement *> mAutomaticStylesElements;
++	std::vector <GraphicsElement *> mStrokeDashElements;
++	std::vector <GraphicsElement *> mGradientElements;
++	GraphicsHandler *mpHandler;
++
++	int m_gradientIndex;
++	int m_dashIndex;
++	int m_styleIndex;
++	void writeStyle();
++	std::ostringstream m_value, m_name;
++	double m_width, m_height;
++	const bool m_isFlatXML;
++#endif
+ };
+ 
+ #endif // __ODGEXPORTER_H__

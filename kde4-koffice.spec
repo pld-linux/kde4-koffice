@@ -498,7 +498,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libqproimport.so
 %attr(755,root,root) %{_libdir}/kde4/libwpexport.so
 %attr(755,root,root) %{_libdir}/kde4/libwpimport.so
+%if "%{pld_release}" == "ti"
 %attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
+%endif
 %attr(755,root,root) %{_libdir}/kde4/musicshape.so
 %attr(755,root,root) %{_libdir}/kde4/pathshapes.so
 %attr(755,root,root) %{_libdir}/kde4/pictureshape.so

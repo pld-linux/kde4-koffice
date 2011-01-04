@@ -623,6 +623,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/keximigrate_txt.desktop
 %{_datadir}/kde4/services/keximigrate_xbase.desktop
 %{_datadir}/kde4/services/kexirelationdesignshape.desktop
+%{_datadir}/kde4/services/kexidb_sybasedriver.desktop
+%{_datadir}/kde4/services/keximigrate_sybase.desktop
 %dir %{_datadir}/kde4/services/kformdesigner
 %{_datadir}/kde4/services/kformdesigner/kformdesigner_containers.desktop
 %{_datadir}/kde4/services/kformdesigner/kformdesigner_kexidbfactory.desktop
@@ -822,6 +824,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/krita_png.desktop
 %{_desktopdir}/kde4/krita_tiff.desktop
 %{_datadir}/config/kritarc
+%{_datadir}/config/krita.knsrc
 %{_datadir}/color/icc/krita
 %{_datadir}/kde4/services/krita*.desktop
 %{_datadir}/templates/Illustration.desktop

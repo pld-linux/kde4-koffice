@@ -10,7 +10,7 @@
 
 %define		_state		stable
 %define		orgname		koffice
-%define		kdever		4.5.5.
+%define		kdever		4.5.5
 %define		qtver		4.7.1
 
 Summary:	KOffice - powerful office suite for KDE

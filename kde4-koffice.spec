@@ -56,8 +56,8 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libpqxx-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libwpd-devel >= 0.8.14
-BuildRequires:	libwpg-devel >= 0.1.3
+BuildRequires:	libwpd-devel >= 0.9
+BuildRequires:	libwpg-devel >= 0.2
 BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel
@@ -493,9 +493,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libqproimport.so
 %attr(755,root,root) %{_libdir}/kde4/libwpexport.so
 %attr(755,root,root) %{_libdir}/kde4/libwpimport.so
-%if "%{pld_release}" == "ti"
 %attr(755,root,root) %{_libdir}/kde4/libwpgimport.so
-%endif
 %attr(755,root,root) %{_libdir}/kde4/musicshape.so
 %attr(755,root,root) %{_libdir}/kde4/pathshapes.so
 %attr(755,root,root) %{_libdir}/kde4/pictureshape.so

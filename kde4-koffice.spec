@@ -393,10 +393,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkdchart.so.?
 %attr(755,root,root) %{_libdir}/libkochart.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkochart.so.?
-#%attr(755,root,root) %{_libdir}/libkoffice_graya_u16.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkoffice_graya_u16.so.?
-#%attr(755,root,root) %{_libdir}/libkofficegrayau8colorspace.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkofficegrayau8colorspace.so.?
 %attr(755,root,root) %{_libdir}/libkopageapp.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkopageapp.so.?
 %attr(755,root,root) %{_libdir}/libkotext.so.*.*.*
@@ -415,12 +411,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkwmf.so.?
 %attr(755,root,root) %{_libdir}/libkwordexportfilters.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkwordexportfilters.so.?
-#%attr(755,root,root) %ghost %{_libdir}/libkoaction.so.?
-#%attr(755,root,root) %{_libdir}/libkoaction.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkobase.so.?
-#%attr(755,root,root) %{_libdir}/libkobase.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkocolorwidgets.so.?
-#%attr(755,root,root) %{_libdir}/libkocolorwidgets.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkoplugin.so.?
 %attr(755,root,root) %{_libdir}/libkoplugin.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkowidgets.so.?
@@ -429,27 +419,19 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %ghost %{_libdir}/libkarbonui.so.?
 %attr(755,root,root) %{_libdir}/libkpresenterprivate.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkpresenterprivate.so.?
-#%attr(755,root,root) %{_libdir}/kde4/clipartthumbnail.so
-#%attr(755,root,root) %{_libdir}/kde4/kodocinfopropspage.so
 %attr(755,root,root) %{_libdir}/kde4/kofficescan.so
 %attr(755,root,root) %{_libdir}/kde4/kofficethumbnail.so
 %attr(755,root,root) %{_libdir}/kde4/libgenerickofilter.so
 %attr(755,root,root) %{_libdir}/kde4/libxslt*port*.so
 %attr(755,root,root) %{_libdir}/kde4/libkounavailpart.so
-#%attr(755,root,root) %{_libdir}/kde4/koffice_graya_u16_plugin.so
 %attr(755,root,root) %{_libdir}/kde4/kofficedockers.so
-#%attr(755,root,root) %{_libdir}/kde4/kofficegrayau8plugin.so
 %attr(755,root,root) %{_libdir}/kde4/kolcmsengine.so
 %attr(755,root,root) %{_libdir}/kde4/kprvariables.so
 %attr(755,root,root) %{_libdir}/kde4/vectorshape.so
 %attr(755,root,root) %{_libdir}/kde4/videoshape.so
 %{_datadir}/apps/koffice
-#%{_datadir}/kde4/services/clipartthumbnail.desktop
-#%{_datadir}/kde4/services/kodocinfopropspage.desktop
 %{_datadir}/kde4/services/kofficethumbnail.desktop
-#%{_datadir}/kde4/services/koffice_graya_u16_plugin.desktop
 %{_datadir}/kde4/services/kofficedockers.desktop
-#%{_datadir}/kde4/services/kofficegrayaplugin.desktop
 %{_datadir}/kde4/services/kounavail.desktop
 %{_datadir}/kde4/services/xslt_*.desktop
 %{_datadir}/kde4/services/generic_filter.desktop
@@ -463,7 +445,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/koffice.desktop
 %{_iconsdir}/oxygen/*/actions/*.png
 %exclude %{_iconsdir}/oxygen/scalable
-#%{_iconsdir}/oxygen/*/actions/*.svgz
 %{_kdedocdir}/en/koffice
 %dir %{_datadir}/color
 %dir %{_datadir}/color/icc
@@ -505,14 +486,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkokross.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkoodf.so.?
 %attr(755,root,root) %{_libdir}/libkoodf.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkostore.so.?
-#%attr(755,root,root) %{_libdir}/libkostore.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkomain.so.?
 %attr(755,root,root) %{_libdir}/libkomain.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libflake.so.?
 %attr(755,root,root) %{_libdir}/libflake.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkoresources.so.?
-#%attr(755,root,root) %{_libdir}/libkoresources.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libpigmentcms.so.?
 %attr(755,root,root) %{_libdir}/libpigmentcms.so.*.*.*
 %{_datadir}/kde4/services/Filterkpr2odf.desktop
@@ -556,7 +533,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/karbon
 %attr(755,root,root) %{_libdir}/libkdeinit4_karbon.so
 %attr(755,root,root) %{_libdir}/kde4/*karbon*.so
-#%attr(755,root,root) %{_libdir}/kde4/*wmf*port.so
 %{_datadir}/apps/karbon
 %{_datadir}/config/karbonrc
 %{_datadir}/kde4/services/karbon*
@@ -564,7 +540,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/Illustration.desktop
 %{_desktopdir}/kde4/karbon.desktop
 %{_datadir}/kde4/services/ServiceMenus/karbon_konqi.desktop
-#%{_iconsdir}/oxygen/*/apps/karbon.png
 %{_kdedocdir}/en/karbon
 
 %files kchart
@@ -654,8 +629,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files kformula
 %defattr(644,root,root,755)
-#%attr(755,root,root) %{_bindir}/kformula
-#%attr(755,root,root) %{_libdir}/libkdeinit_kformula.so
 %attr(755,root,root) %ghost %{_libdir}/libkformulalib.so.?
 %attr(755,root,root) %{_libdir}/libkformulalib.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkformulaprivate.so.?
@@ -672,14 +645,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/paragraphtool.desktop
 %{_datadir}/apps/formulashape
 %{_datadir}/apps/kformula
-#%%{_desktopdir}/kde4/kformula.desktop
 %{_kdedocdir}/en/kformula
 
 %files kivio
 %defattr(644,root,root,755)
 %{_datadir}/kde4/services/ServiceMenus/kivio_konqi.desktop
-#%{_iconsdir}/*/*/apps/kivio.png
-#%{_kdedocdir}/en/kivio
 
 %files kplato
 %defattr(644,root,root,755)
@@ -704,10 +674,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/kplatosettings.kcfg
 %{_datadir}/config/kplatoworkrc
 %{_iconsdir}/hicolor/*/apps/kplato.png
-#%{_iconsdir}/hicolor/*/apps/kplato.svgz
 %{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.png
-#%{_iconsdir}/hicolor/*/mimetypes/application-x-vnd.kde.kplato.svgz
-#%{_kdedocdir}/en/kplato
 
 %files kpresenter
 %defattr(644,root,root,755)
@@ -745,28 +712,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/krita
 %attr(755,root,root) %{_libdir}/libkdeinit4_krita.so
-#%attr(755,root,root) %ghost %{_libdir}/libKritaRulerAssistantCommon.so.?
-#%attr(755,root,root) %{_libdir}/libKritaRulerAssistantCommon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibbrush.so.?
 %attr(755,root,root) %{_libdir}/libkritalibbrush.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkrita_xyz_u16.so.?
-#%attr(755,root,root) %{_libdir}/libkrita_xyz_u16.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkritagrayscale.so.?
-#%attr(755,root,root) %{_libdir}/libkritagrayscale.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkritalibpaintop.so.?
 %attr(755,root,root) %{_libdir}/libkritalibpaintop.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkrossmodulekrita.so.?
 %attr(755,root,root) %{_libdir}/libkrossmodulekrita.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamiccoloringprogram.so.?
-#%attr(755,root,root) %{_libdir}/libkritabasicdynamiccoloringprogram.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkritabasicdynamicshapeprogram.so.?
-#%attr(755,root,root) %{_libdir}/libkritabasicdynamicshapeprogram.so.*.*.*
-#%attr(755,root,root) %ghost %{_libdir}/libkritadynamicbrush.so.?
-#%attr(755,root,root) %{_libdir}/libkritadynamicbrush.so.*.*.*
 %attr(755,root,root) %{_libdir}/kde4/krita*.so
 %attr(755,root,root) %{_libdir}/kde4/libkritabmpexport.so
-#%attr(755,root,root) %{_libdir}/kde4/libkritagmagickexport.so
-#%attr(755,root,root) %{_libdir}/kde4/libkritagmagickimport.so
 %attr(755,root,root) %{_libdir}/kde4/libkritajp2export.so
 %attr(755,root,root) %{_libdir}/kde4/libkritajp2import.so
 %attr(755,root,root) %{_libdir}/kde4/libkritajpegexport.so
@@ -800,7 +753,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/krita_bmp.desktop
 %{_desktopdir}/kde4/krita_jp2.desktop
 %{_desktopdir}/kde4/krita_jpeg.desktop
-#%{_desktopdir}/kde4/krita_magick.desktop
 %{_desktopdir}/kde4/krita_ora.desktop
 %{_desktopdir}/kde4/krita_png.desktop
 %{_desktopdir}/kde4/krita_tiff.desktop
@@ -810,7 +762,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/templates/Illustration.desktop
 %{_datadir}/mime/packages/krita_ora.xml
 %{_iconsdir}/hicolor/*/apps/krita.png
-#%{_kdedocdir}/en/krita
 
 %files kspread
 %defattr(644,root,root,755)
@@ -867,7 +818,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/libwm*port.so
 %attr(755,root,root) %{_libdir}/kde4/librtf*port.so
 %attr(755,root,root) %{_libdir}/kde4/thesaurustool.so
-#%attr(755,root,root) %{_libdir}/kde4/libmswrite*port.so
 %attr(755,root,root) %{_libdir}/kde4/libmswordodf_import.so
 %attr(755,root,root) %{_libdir}/kde4/libkword*.so
 %attr(755,root,root) %{_libdir}/kde4/liboowriter*port.so
@@ -887,7 +837,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/kde4/KThesaurus.desktop
 %{_desktopdir}/kde4/kword.desktop
 %{_iconsdir}/hicolor/*/apps/kword.png
-#%{_kdedocdir}/en/kword
 %{_kdedocdir}/en/thesaurus
 
 %files devel

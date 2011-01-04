@@ -72,7 +72,7 @@ BuildRequires:	qimageblitz-devel
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRequires:	soprano-devel
 BuildRequires:	sqlite3-devel >= 3.6.23
 BuildRequires:	wv2-devel >= 0.4.1
@@ -335,17 +335,12 @@ Processador de texto do KOffice.
 
 %prep
 %setup -q -n %{orgname}-%{version}
-%patch0 -p0
+%patch0 -p1
 
 %build
 install -d build
 cd build
 %cmake \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64 \
-%endif
 	../
 
 %{__make}

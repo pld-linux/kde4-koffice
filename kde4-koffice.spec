@@ -20,12 +20,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	2.3.0
+Version:	2.3.1
 Release:	0.1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	4f99a44b004e4a237890e0834a09964b
+# Source0-md5:	5ae8fa9d557f192bd6365f9450785228
 URL:		http://www.koffice.org/
 Patch0:		%{name}-libwpdg.patch
 BuildRequires:	GraphicsMagick-devel

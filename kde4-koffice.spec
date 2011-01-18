@@ -427,6 +427,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kofficedockers.so
 %attr(755,root,root) %{_libdir}/kde4/kolcmsengine.so
 %attr(755,root,root) %{_libdir}/kde4/kprvariables.so
+%attr(755,root,root) %{_libdir}/kde4/koreport_barcodeplugin.so
+%attr(755,root,root) %{_libdir}/kde4/koreport_chartplugin.so
+%attr(755,root,root) %{_libdir}/kde4/koreport_shapeplugin.so
 #%attr(755,root,root) %{_libdir}/kde4/vectorshape.so
 %attr(755,root,root) %{_libdir}/kde4/videoshape.so
 %{_datadir}/apps/koffice
@@ -439,6 +442,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kprvariables.desktop
 #%{_datadir}/kde4/services/vectorshape.desktop
 %{_datadir}/kde4/services/videoshape.desktop
+%{_datadir}/kde4/services/koreport_barcodeplugin.desktop
+%{_datadir}/kde4/services/koreport_chartplugin.desktop
+%{_datadir}/kde4/services/koreport_shapeplugin.desktop
 %{_datadir}/mime/packages/msooxml-all.xml
 %{_datadir}/kde4/servicetypes/*
 %dir %{_datadir}/templates/.source
@@ -695,6 +701,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_iriswipe.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_matrixwipe.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_slidewipe.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_fade.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_spacerotation.so
+%attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_swapeffect.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_shapeanimation_example.so
 %{_datadir}/apps/kpresenter
 %{_datadir}/config/kpresenterrc
@@ -708,6 +717,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/kpr_pageeffect_iriswipe.desktop
 %{_datadir}/kde4/services/kpr_pageeffect_matrixwipe.desktop
 %{_datadir}/kde4/services/kpr_pageeffect_slidewipe.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_fade.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_spacerotation.desktop
+%{_datadir}/kde4/services/kpr_pageeffect_swapeffect.desktop
 %{_datadir}/kde4/services/kpr_shapeanimation_example.desktop
 %{_desktopdir}/kde4/kpresenter.desktop
 %{_iconsdir}/hicolor/*/apps/kpresenter.png

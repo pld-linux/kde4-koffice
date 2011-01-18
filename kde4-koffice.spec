@@ -488,6 +488,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/spreadsheetshape.so
 %attr(755,root,root) %{_libdir}/kde4/textshape.so
 %attr(755,root,root) %{_libdir}/kde4/textvariables.so
+%attr(755,root,root) %{_libdir}/kde4/commentshape.so
+%attr(755,root,root) %{_libdir}/kde4/kodocinfopropspage.so
+%attr(755,root,root) %{_libdir}/kde4/okularGenerator_odp.so
+%attr(755,root,root) %{_libdir}/kde4/pluginshape.so
 %attr(755,root,root) %ghost %{_libdir}/libkokross.so.?
 %attr(755,root,root) %{_libdir}/libkokross.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkoodf.so.?
@@ -514,6 +518,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/spellcheck.desktop
 %{_datadir}/kde4/services/textshape.desktop
 %{_datadir}/kde4/services/textvariables.desktop
+%{_datadir}/kde4/services/commentshape.desktop
+%{_datadir}/kde4/services/html-odf_export.desktop
+%{_datadir}/kde4/services/kodocinfopropspage.desktop
+%{_datadir}/kde4/services/libokularGenerator_odp.desktop
+%{_datadir}/kde4/services/okularOdp.desktop
+%{_datadir}/kde4/services/pluginshape.desktop
+%{_desktopdir}/kde4/okularApplication_odp.desktop
 # these libs actually need to be here, to prevent LOOPS
 %attr(755,root,root) %{_libdir}/libkarboncommon.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkarboncommon.so.?
@@ -572,6 +583,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkexidatatable.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkexidb.so.?
 %attr(755,root,root) %{_libdir}/libkexidb.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkexiextendedwidgets.so.?
 %attr(755,root,root) %{_libdir}/libkexiextendedwidgets.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkexiformutils.so.?
 %attr(755,root,root) %{_libdir}/libkexiformutils.so.*.*.*

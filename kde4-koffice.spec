@@ -21,7 +21,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.3.1
-Release:	0.1
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
@@ -544,6 +544,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkplatoprivate.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkplatoui.so.?
 %attr(755,root,root) %{_libdir}/libkplatoui.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libkspreadodf.so.?
+%attr(755,root,root) %{_libdir}/libkspreadodf.so.*.*.*
 
 %files karbon
 %defattr(644,root,root,755)
@@ -858,8 +860,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kspread
 %attr(755,root,root) %{_libdir}/libkdeinit4_kspread.so
-%attr(755,root,root) %{_libdir}/libkspreadodf.so.*.*.*
-%attr(755,root,root) %{_libdir}/libkspreadodf.so.?
 %attr(755,root,root) %{_libdir}/kde4/kspread_plugin_tool_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadbitopsmodule.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadconversionmodule.so

@@ -687,7 +687,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kpresenter
 %attr(755,root,root) %{_libdir}/libkdeinit4_kpresenter.so
 %attr(755,root,root) %{_libdir}/kde4/kpresenter*.so
-%attr(755,root,root) %{_libdir}/kde4/kpresenter*.so
 %attr(755,root,root) %{_libdir}/kde4/pptximport.so
 %attr(755,root,root) %{_libdir}/kde4/powerpointimport.so
 %attr(755,root,root) %{_libdir}/kde4/kpr_pageeffect_barwipe.so
@@ -754,7 +753,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kritahistogram.so
 %attr(755,root,root) %{_libdir}/kde4/kritaimageenhancement.so
 %attr(755,root,root) %{_libdir}/kde4/kritaimagesize.so
-%attr(755,root,root) %{_libdir}/kde4/kritakscolorspacesplugin.so
+#%attr(755,root,root) %{_libdir}/kde4/kritakscolorspacesplugin.so
 %attr(755,root,root) %{_libdir}/kde4/kritalayercompose.so
 %attr(755,root,root) %{_libdir}/kde4/kritalevelfilter.so
 %attr(755,root,root) %{_libdir}/kde4/kritametadataeditor.so

@@ -846,6 +846,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kspread
 %attr(755,root,root) %{_libdir}/libkdeinit4_kspread.so
+%attr(755,root,root) %{_libdir}/libkspreadodf.so.*.*.*
+%attr(755,root,root) %{_libdir}/libkspreadodf.so.?
 %attr(755,root,root) %{_libdir}/kde4/kspread_plugin_tool_calendar.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadbitopsmodule.so
 %attr(755,root,root) %{_libdir}/kde4/kspreadconversionmodule.so

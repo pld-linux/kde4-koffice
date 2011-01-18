@@ -27,6 +27,7 @@ Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
 # Source0-md5:	5ae8fa9d557f192bd6365f9450785228
 URL:		http://www.koffice.org/
+Patch0:		%{name}-libwpg02.patch
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
@@ -334,6 +335,7 @@ Processador de texto do KOffice.
 
 %prep
 %setup -q -n %{orgname}-%{version}
+%patch0 -p1
 
 %build
 install -d build

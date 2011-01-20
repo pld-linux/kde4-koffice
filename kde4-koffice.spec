@@ -21,7 +21,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.3.1
-Release:	2
+Release:	3
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
@@ -654,7 +654,7 @@ rm -rf $RPM_BUILD_ROOT
 %files kformula
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kformula
-%attr(755,root,root) %{_libdir}/libkdeinit4_kformula.so
+%attr(755,root,root) %{_libdir}/libkdeinit_kformula.so
 %attr(755,root,root) %ghost %{_libdir}/libkformulalib.so.?
 %attr(755,root,root) %{_libdir}/libkformulalib.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkformulaprivate.so.?
@@ -936,6 +936,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %exclude %{_libdir}/libkdeinit4_*.so
+%exclude %{_libdir}/libkdeinit_*.so
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/*.h
 %{_includedir}/changetracker

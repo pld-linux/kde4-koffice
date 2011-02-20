@@ -21,7 +21,7 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.3.1
-Release:	4
+Release:	5
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
@@ -447,8 +447,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/oxygen/*/actions/*.png
 %exclude %{_iconsdir}/oxygen/scalable
 %{_kdedocdir}/en/koffice
-%dir %{_datadir}/color
-%dir %{_datadir}/color/icc
 %{_datadir}/color/icc/pigment
 #
 # Files i dunno what to do with

@@ -20,12 +20,12 @@ Summary(ru.UTF-8):	Набор оффисных программ для KDE
 Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
-Version:	2.3.1
-Release:	5
+Version:	2.3.2
+Release:	1
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	5ae8fa9d557f192bd6365f9450785228
+# Source0-md5:	e22b9839e1ca4d0e2ce98cd8a970edd3
 URL:		http://www.koffice.org/
 Patch0:		%{name}-libwpg02.patch
 BuildRequires:	GraphicsMagick-devel
@@ -197,10 +197,10 @@ KChart jest aplikacją służącą do generowania wykresów.
 Gerador de diagramas do KOffice.
 
 %package kexi
-Summary:        KOffice - Kexi
-Summary(pl.UTF-8):      KOffice - Kexi
-Group:          X11/Applications
-Requires:       %{name}-common = %{version}-%{release}
+Summary:	KOffice - Kexi
+Summary(pl.UTF-8):	KOffice - Kexi
+Group:		X11/Applications
+Requires:	%{name}-common = %{version}-%{release}
 
 %description kexi
 Kexi is KOffice part for using database system such as MySQL.
@@ -616,7 +616,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kformdesigner_kexidbwidgets.so
 %attr(755,root,root) %{_libdir}/kde4/kformdesigner_stdwidgets.so
 %attr(755,root,root) %{_libdir}/kde4/krossmodulekexidb.so
-%{_datadir}/applications/kde4/kexi.desktop
+%{_desktopdir}/kde4/kexi.desktop
 %{_datadir}/apps/kexi
 %{_datadir}/config/kexirc
 %dir %{_datadir}/kde4/services/kexi
@@ -832,9 +832,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kde4/services/ServiceMenus/krita_konqi.desktop
 %{_datadir}/apps/krita
 %{_datadir}/apps/kritaplugins
-%{_datadir}/applications/kde4/krita_gif.desktop
-%{_datadir}/applications/kde4/krita_ppm.desktop
-%{_datadir}/applications/kde4/krita_xcf.desktop
+%{_desktopdir}/kde4/krita_gif.desktop
+%{_desktopdir}/kde4/krita_ppm.desktop
+%{_desktopdir}/kde4/krita_xcf.desktop
 %{_desktopdir}/kde4/krita.desktop
 %{_desktopdir}/kde4/krita_bmp.desktop
 %{_desktopdir}/kde4/krita_jp2.desktop

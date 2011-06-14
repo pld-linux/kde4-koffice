@@ -31,6 +31,7 @@ Patch0:		%{name}-libwpg02.patch
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
+BuildRequires:	QtXmlPatterns-devel
 BuildRequires:	automoc4 >= 0.9.88
 BuildRequires:	boost-devel
 BuildRequires:	bzip2-devel

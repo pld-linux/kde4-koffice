@@ -43,12 +43,15 @@ BuildRequires:	giflib-devel
 BuildRequires:	glew-devel
 BuildRequires:	gmm-devel
 BuildRequires:	gsl-devel
-BuildRequires:	kde4-kdegraphics-devel >= %{kdever}
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	lcms-devel >= 1.18
 BuildRequires:	libexif-devel >= 0.6.12
 BuildRequires:	libjpeg-devel
+BuildRequires:	libkdcraw-devel >= %{kdever}
+BuildRequires:	libkexiv2-devel >= %{kdever}
+BuildRequires:	libkipi-devel >= %{kdever}
+BuildRequires:	libksane-devel >= %{kdever}
 BuildRequires:	libpng-devel
 BuildRequires:	libpqxx-devel
 BuildRequires:	libtiff-devel

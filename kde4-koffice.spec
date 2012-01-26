@@ -10,8 +10,8 @@
 
 %define		_state		stable
 %define		orgname		koffice
-%define		kdever		4.6.0
-%define		qtver		4.7.1
+%define		kdever		4.8.0
+%define		qtver		4.8.0
 
 Summary:	KOffice - powerful office suite for KDE
 Summary(pl.UTF-8):	KOffice - potężny pakiet biurowy dla KDE
@@ -21,13 +21,14 @@ Summary(uk.UTF-8):	Набір офісних програм для KDE
 Summary(zh_CN.UTF-8):	KDE 的办公应用软件集。
 Name:		kde4-koffice
 Version:	2.3.3
-Release:	13
+Release:	14
 License:	GPL/LGPL
 Group:		X11/Applications
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{orgname}-%{version}/%{orgname}-%{version}.tar.bz2
 # Source0-md5:	1ebb955d54b6d6032999cc92e4b13bfe
 URL:		http://www.koffice.org/
 Patch0:		%{name}-libwpg02.patch
+Patch1:		koffice-2.3.3-no-qdebug-pixmap.patch
 BuildRequires:	GraphicsMagick-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	OpenGL-GLU-devel
@@ -48,10 +49,10 @@ BuildRequires:	kde4-kdepimlibs-devel >= %{kdever}
 BuildRequires:	lcms-devel >= 1.18
 BuildRequires:	libexif-devel >= 0.6.12
 BuildRequires:	libjpeg-devel
-BuildRequires:	libkdcraw-devel >= %{kdever}
-BuildRequires:	libkexiv2-devel >= %{kdever}
-BuildRequires:	libkipi-devel >= %{kdever}
-BuildRequires:	libksane-devel >= %{kdever}
+BuildRequires:	kde4-libkdcraw-devel >= %{kdever}
+BuildRequires:	kde4-libkexiv2-devel >= %{kdever}
+BuildRequires:	kde4-libkipi-devel >= %{kdever}
+BuildRequires:	kde4-libksane-devel >= %{kdever}
 BuildRequires:	libpng-devel
 BuildRequires:	libpqxx-devel
 BuildRequires:	libtiff-devel
@@ -60,7 +61,7 @@ BuildRequires:	libwpg-devel >= 0.2
 BuildRequires:	libxml2-devel >= 0:2.4.8
 BuildRequires:	libxslt-devel >= 1.0.7
 BuildRequires:	mysql-devel
-BuildRequires:	okular-devel >= %{kdever}
+BuildRequires:	kde4-okular-devel >= %{kdever}
 BuildRequires:	openjpeg-devel >= 1.3
 BuildRequires:	pkgconfig
 %if %{with pdf}
@@ -336,6 +337,7 @@ Processador de texto do KOffice.
 %prep
 %setup -q -n %{orgname}-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 install -d build
